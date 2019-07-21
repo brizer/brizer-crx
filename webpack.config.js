@@ -21,6 +21,10 @@ module.exports = env => ({
   module: {
     rules: [
       {
+        test: /\.(css|less)$/,
+        use:['style-loader','css-loader','less-loader']
+      },
+      {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /(node_modules)/,
         use: [
