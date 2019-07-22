@@ -20,10 +20,7 @@ module.exports = env => ({
   },
   module: {
     rules: [
-      {
-        test: /\.(css|less)$/,
-        use:['style-loader','css-loader','less-loader']
-      },
+      
       {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /(node_modules)/,
@@ -39,22 +36,42 @@ module.exports = env => ({
                     isTSX: true,
                     allExtensions: true
                   }
-                ],
+                ]
               ],
               plugins: [
+                ['@babel/plugin-proposal-class-properties'],
                 [
                   "import",
                   {
                     libraryName: "antd",
                     libraryDirectory: "es",
-                    style: "css" // `style: true` 会加载 less 文件
+                    style:true // `style: true` 会加载 less 文件
                   }
                 ]
               ]
             }
           }
         ]
-      }
+      },{
+        test: /\less$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                localIdentName: "[name]__[local]--[hash:base64:5]"
+              }
+            }
+          },
+          {
+            loader: "less-loader",
+            options:{
+              javascriptEnabled:true
+            }
+          }
+        ]
+      },
     ]
   },
   plugins: [
