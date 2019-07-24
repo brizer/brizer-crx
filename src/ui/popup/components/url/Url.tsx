@@ -1,5 +1,6 @@
 import React, { useState, useContext, useRef } from "react";
 import { Table, Form, Input, Button } from "antd";
+import styles from './Url.less';
 
 const UrlContext = React.createContext(null);
 
@@ -85,7 +86,7 @@ class UrlCell extends React.Component {
       ...restProps
     }: any = this.props;
     return (
-      <td {...restProps}>
+      <td {...restProps} className={styles.td}>
         {editable ? (
           <UrlContext.Consumer>{this.renderCell}</UrlContext.Consumer>
         ) : (

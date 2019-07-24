@@ -9,7 +9,7 @@ interface AppState {}
 
 const App: FunctionComponent<AppProps> = (props: AppProps) => {
   return (
-    <div>
+    <div className={styles.app}>
       <div className={styles.nav}>
         <div className={styles.navItem}>
           <Link to="/">主页</Link>

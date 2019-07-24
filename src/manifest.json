@@ -11,5 +11,9 @@
       "38": "icons/kt38.png"
     }
   },
+  "background": {
+    "persistent": true,
+    "page": "background/index.html"
+  },
   "permissions": ["storage", "tabs", "<all_urls>"]
 }

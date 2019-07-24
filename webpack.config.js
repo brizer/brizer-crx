@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 
 module.exports = env => ({
-  entry: { "ui/popup/popup": "./src/ui/popup/index.tsx" },
+  entry: { "ui/popup/popup": "./src/ui/popup/index.tsx","background/background":"./src/background/index.ts" },
   mode: process.env.NODE_ENV,
   output: {
     path: path.resolve(__dirname, "./dist/"),
@@ -77,7 +77,13 @@ module.exports = env => ({
   plugins: [
     new HtmlWebpackPlugin({
       filename: "./ui/popup/index.html",
+      chunks: ["ui/popup/popup"],
       template: path.resolve("./src/ui/popup/index.html")
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./background/index.html",
+      chunks: ["background/background"],
+      template: path.resolve("./src/background/index.html")
     }),
     new webpack.HotModuleReplacementPlugin(),
     new CopyPlugin([
