@@ -17,3 +17,15 @@ export interface UrlItem {
 export interface UserSettings {
     urls:UrlItem[]
 }
+
+export interface Message {
+    type: string;
+    data?: any;
+    id?: any;
+    error?: any;
+}
+
+export interface MessageAdapter {
+    changeSettings: (settings: Partial<UserSettings>) => void;
+
+}

@@ -2,7 +2,7 @@ import { UserSettings } from "definitions";
 
 export default class UserStorage {
     private defaultSettings: UserSettings;
-    private settings: Readonly<UserSettings>;
+    public settings: Readonly<UserSettings>;
 
     constructor() {
         this.defaultSettings = {
@@ -12,7 +12,7 @@ export default class UserStorage {
     }
 
 
-    async loadSettings() {
+    public async loadSettings() {
         this.settings = await this.loadSettingsFromStorage();
     }
     /**
@@ -26,7 +26,7 @@ export default class UserStorage {
         });
     }
 
-    async saveSettings() {
+    public async saveSettings() {
         const saved = await this.saveSettingsIntoStorage(this.settings);
         this.settings = saved;
     }
@@ -38,5 +38,12 @@ export default class UserStorage {
         return new Promise<UserSettings>((resolve) => {
             chrome.storage.local.set(settings, () => resolve(settings));
         });
+    }
+    /**
+     * set this.settings
+     * @param settings 
+     */
+    public set(settings: Partial<UserSettings>) {
+        this.settings = {...this.settings, ...settings};
     }
 }
