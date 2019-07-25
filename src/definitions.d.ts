@@ -1,5 +1,3 @@
-declare module '*.less'
-declare module '*.css'
 
 export interface ExtensionData {
     settings: UserSettings;

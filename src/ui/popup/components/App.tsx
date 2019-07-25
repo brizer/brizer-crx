@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from "react";
 import { Link, Route } from "react-router-dom";
 import Url from "./url/Url";
-import styles from "./App.less";
 import { ExtensionData, ExtensionActions } from "definitions";
+import styles from "./App.less";
 
 interface AppProps {
   data:ExtensionData;
