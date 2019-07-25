@@ -1,6 +1,6 @@
 import UserStorage from "./userStorage";
 import Messenger from "./messenger";
-import { MessageAdapter, UserSettings } from "definitions";
+import { MessageAdapter, UserSettings, ExtensionData } from "definitions";
 
 export class Extension{
     private ready:boolean;
@@ -14,16 +14,25 @@ export class Extension{
 
     async start () {
         this.ready = true;
-        console.warn(12345)
     }
 
     private getMessengerAdapter() :MessageAdapter{
         return {
+            collect:()=> this.collectData(),
             changeSettings:(settings)=> this.changeSettings(settings)
         }
     }
 
+    private async collectData():Promise<ExtensionData>{
+        return {
+            settings: this.user.settings
+        }
+    }
     private changeSettings(settings:Partial<UserSettings>){
         this.user.set(settings);
+        this.saveUserSettings()
     }
+    private async saveUserSettings(){
+        this.user.saveSettings()
+    } 
 }

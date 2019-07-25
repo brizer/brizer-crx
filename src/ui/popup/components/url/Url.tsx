@@ -1,6 +1,7 @@
 import React, { useState, useContext, useRef } from "react";
 import { Table, Form, Input, Button } from "antd";
-import styles from './Url.less';
+import styles from "./Url.less";
+import { UrlItem, ExtensionActions } from "definitions";
 
 const UrlContext = React.createContext(null);
 
@@ -97,19 +98,12 @@ class UrlCell extends React.Component {
   }
 }
 
-const Url = () => {
-  const [dataSource, setDataSource] = useState([
-    {
-      key: 0,
-      str: "localhost:8080",
-      toStr: "http://www.baidu.com"
-    },
-    {
-      key: 1,
-      str: "localhost:8081",
-      toStr: "http://www.google.com"
-    }
-  ]);
+const Url = props => {
+  const {
+    urls,
+    actions
+  }: { urls: UrlItem[]; actions: ExtensionActions } = props;
+  const [dataSource, setDataSource] = useState(urls);
 
   let [columns, setColumns] = useState([
     {
@@ -130,7 +124,9 @@ const Url = () => {
       render: (text, record) => (
         <div>
           <a href="javascript:;">跳转</a>
-          <a href="javascript:;" onClick={()=>handleDelete(record.key)}>删除</a>
+          <a href="javascript:;" onClick={() => handleDelete(record.key)}>
+            删除
+          </a>
         </div>
       )
     }
@@ -169,6 +165,7 @@ const Url = () => {
       ...row
     });
     setDataSource(newData);
+    actions.changeSettings({urls:newData})
   }
 
   function handleAdd() {
@@ -180,8 +177,10 @@ const Url = () => {
     setDataSource([...dataSource, newData]);
   }
 
-  function handleDelete(key:number){
-      setDataSource(dataSource.filter(item=>item.key!==key))
+  function handleDelete(key: number) {
+    const newData = dataSource.filter(item => item.key !== key)
+    setDataSource(newData);
+    actions.changeSettings({urls:newData})
   }
 
   return (

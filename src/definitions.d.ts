@@ -1,6 +1,13 @@
 declare module '*.less'
 declare module '*.css'
 
+export interface ExtensionData {
+    settings: UserSettings;
+}
+
+export interface ExtensionActions {
+    changeSettings(settings: Partial<UserSettings>);
+}
 
 export interface UrlItem {
     key:number;
@@ -26,6 +33,7 @@ export interface Message {
 }
 
 export interface MessageAdapter {
+    collect: ()=>Promise<ExtensionData>
     changeSettings: (settings: Partial<UserSettings>) => void;
 
 }

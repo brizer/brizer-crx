@@ -1,10 +1,13 @@
-import { UserSettings, Message, MessageAdapter } from '../definitions'
-import { MESSAGE_CHANGE_SETTINGS, UI_NAME } from '../const';
+import { UserSettings, Message, MessageAdapter, ExtensionData } from '../definitions'
+import { MESSAGE_CHANGE_SETTINGS, UI_NAME, MESSAGE_GET_DATA, SUBSCRIBE_TO_CHANGES } from '../const';
 
 
 export default class Messenger {
+    private reporters: Set<(info: ExtensionData) => void>;
+
     private adapter:MessageAdapter;
     constructor(adapter:MessageAdapter){
+        
         this.adapter = adapter;
         chrome.runtime.onConnect.addListener((port) => {
             if (port.name === UI_NAME) {
@@ -15,7 +18,11 @@ export default class Messenger {
 
     private async onUIMessage(port: chrome.runtime.Port, {type, id, data}: Message) {
         switch (type) {
-            
+            case MESSAGE_GET_DATA:{
+                const data = await this.adapter.collect();
+                port.postMessage({id,data})
+                break;
+            }
             case MESSAGE_CHANGE_SETTINGS: {
                 this.adapter.changeSettings(data);
                 break;
