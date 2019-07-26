@@ -10,7 +10,6 @@ export default class UserStorage {
         }
         this.settings = Object.assign({},this.defaultSettings);
         this.loadSettings();
-        console.log(this.settings);
     }
 
 
@@ -23,7 +22,6 @@ export default class UserStorage {
     private loadSettingsFromStorage() {
         return new Promise<UserSettings>((resolve) => {
             chrome.storage.sync.get(this.defaultSettings, (local: UserSettings) => {
-                console.log(local)
                 resolve(local)
             });
         });
@@ -39,7 +37,6 @@ export default class UserStorage {
      */
     private saveSettingsIntoStorage(settings: UserSettings) {
         return new Promise<UserSettings>((resolve) => {
-            console.log(settings)
             chrome.storage.sync.set(settings, () => resolve(settings));
         });
     }

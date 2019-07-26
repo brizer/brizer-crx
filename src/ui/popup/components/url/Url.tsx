@@ -123,7 +123,7 @@ const Url = props => {
       dataIndex: "operation",
       render: (text, record) => (
         <div>
-          <a href="javascript:;">跳转</a>
+          <a href="javascript:;" onClick={()=> gotoLinks(record)}>跳转</a>
           <a href="javascript:;" onClick={() => handleDelete(record.key)}>
             删除
           </a>
@@ -136,7 +136,6 @@ const Url = props => {
     body: {
       row: UrlFormRow,
       cell: UrlCell
-      //   cell: EditableCell
     }
   };
 
@@ -181,6 +180,10 @@ const Url = props => {
     const newData = dataSource.filter(item => item.key !== key)
     setDataSource(newData);
     actions.changeSettings({urls:newData})
+  }
+
+  function gotoLinks(record:UrlItem){
+    actions.gotoLink(record);
   }
 
   return (

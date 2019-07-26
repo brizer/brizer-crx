@@ -1,5 +1,5 @@
-import { UI_NAME, MESSAGE_CHANGE_SETTINGS, MESSAGE_GET_DATA, SUBSCRIBE_TO_CHANGES } from "../../const";
-import { UserSettings, ExtensionData, Message } from "definitions";
+import { UI_NAME, MESSAGE_CHANGE_SETTINGS, MESSAGE_GET_DATA, MESSAGE_GOTO } from "../../const";
+import { UserSettings, ExtensionData, Message, UrlItem } from "definitions";
 
 export default class Connector {
     private port: chrome.runtime.Port;
@@ -34,6 +34,9 @@ export default class Connector {
 
     public changeSettings(settings: Partial<UserSettings>) {
         this.port.postMessage({ type: MESSAGE_CHANGE_SETTINGS, data: settings });
+    }
+    public gotoLink(data:UrlItem){
+        this.port.postMessage({type:MESSAGE_GOTO,data:data})
     }
 
     public disconnect() {

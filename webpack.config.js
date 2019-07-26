@@ -4,7 +4,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 
 module.exports = env => ({
-  entry: { "ui/popup/popup": "./src/ui/popup/index.tsx","background/background":"./src/background/index.ts" },
+  entry: {
+    "ui/popup/popup": "./src/ui/popup/index.tsx",
+    "background/background": "./src/background/index.ts",
+    "inject/index": "./src/inject/index.ts"
+  },
   mode: process.env.NODE_ENV,
   output: {
     path: path.resolve(__dirname, "./dist/"),
@@ -20,7 +24,6 @@ module.exports = env => ({
   },
   module: {
     rules: [
-      
       {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /(node_modules)/,
@@ -39,20 +42,21 @@ module.exports = env => ({
                 ]
               ],
               plugins: [
-                ['@babel/plugin-proposal-class-properties'],
+                ["@babel/plugin-proposal-class-properties"],
                 [
                   "import",
                   {
                     libraryName: "antd",
                     libraryDirectory: "es",
-                    style:true // `style: true` 会加载 less 文件
+                    style: true // `style: true` 会加载 less 文件
                   }
                 ]
               ]
             }
           }
         ]
-      },{
+      },
+      {
         test: /\less$/,
         use: [
           "style-loader",
@@ -66,12 +70,12 @@ module.exports = env => ({
           },
           {
             loader: "less-loader",
-            options:{
-              javascriptEnabled:true
+            options: {
+              javascriptEnabled: true
             }
           }
         ]
-      },
+      }
     ]
   },
   plugins: [

@@ -1,5 +1,5 @@
 import { UserSettings, Message, MessageAdapter, ExtensionData } from '../definitions'
-import { MESSAGE_CHANGE_SETTINGS, UI_NAME, MESSAGE_GET_DATA, SUBSCRIBE_TO_CHANGES } from '../const';
+import { MESSAGE_CHANGE_SETTINGS, UI_NAME, MESSAGE_GET_DATA, MESSAGE_GOTO } from '../const';
 
 
 export default class Messenger {
@@ -25,6 +25,10 @@ export default class Messenger {
             }
             case MESSAGE_CHANGE_SETTINGS: {
                 this.adapter.changeSettings(data);
+                break;
+            }
+            case MESSAGE_GOTO: {
+                this.adapter.gotoLink(data)
                 break;
             }
         }

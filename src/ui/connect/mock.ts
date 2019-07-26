@@ -11,8 +11,8 @@ function getMockData(override = {}) {
                 },
                 {
                     key: 112,
-                    str: "localhost:8081",
-                    toStr: "http://www.google.com"
+                    str: "localhost:8080",
+                    toStr: "www.google.com"
                 }
             ]
         } as UserSettings
@@ -27,6 +27,8 @@ export function createConnectorMock() {
         },
         changeSettings(settings:Partial<UserSettings>){
             Object.assign(data.settings,settings)
+        },
+        gotoLink(data){
         },
         disconnect(){
 
