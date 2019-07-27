@@ -1,4 +1,4 @@
-import { UI_NAME, MESSAGE_CHANGE_SETTINGS, MESSAGE_GET_DATA, MESSAGE_GOTO } from "../../const";
+import { UI_NAME, MESSAGE_CHANGE_SETTINGS, MESSAGE_GET_DATA, MESSAGE_GOTO, MESSAGE_COPY_LINK } from "../../const";
 import { UserSettings, ExtensionData, Message, UrlItem } from "definitions";
 
 export default class Connector {
@@ -37,6 +37,10 @@ export default class Connector {
     }
     public gotoLink(data:UrlItem){
         this.port.postMessage({type:MESSAGE_GOTO,data:data})
+    }
+
+    public copyLink(data:UrlItem){
+        this.port.postMessage({type:MESSAGE_COPY_LINK,data:data})
     }
 
     public disconnect() {

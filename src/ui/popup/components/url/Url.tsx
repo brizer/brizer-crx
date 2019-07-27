@@ -109,13 +109,13 @@ const Url = props => {
     {
       title: "替换项",
       dataIndex: "str",
-      width: "40%",
+      width: "30%",
       editable: true
     },
     {
       title: "被替换项",
       dataIndex: "toStr",
-      width: "40%",
+      width: "30%",
       editable: true
     },
     {
@@ -123,8 +123,9 @@ const Url = props => {
       dataIndex: "operation",
       render: (text, record) => (
         <div>
-          <a href="javascript:;" onClick={()=> gotoLinks(record)}>跳转</a>
-          <a href="javascript:;" onClick={() => handleDelete(record.key)}>
+          <a className={styles.actionItem} href="javascript:;" onClick={()=> gotoLinks(record)}>跳转</a>
+          <a className={styles.actionItem} href="javascript:;" onClick={()=> copyLinks(record)}>复制</a>
+          <a className={styles.actionItem} href="javascript:;" onClick={() => handleDelete(record.key)}>
             删除
           </a>
         </div>
@@ -184,6 +185,10 @@ const Url = props => {
 
   function gotoLinks(record:UrlItem){
     actions.gotoLink(record);
+  }
+
+  function copyLinks(record:UrlItem){
+    actions.copyLink(record)
   }
 
   return (

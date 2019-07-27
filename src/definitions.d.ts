@@ -6,6 +6,7 @@ export interface ExtensionData {
 export interface ExtensionActions {
     changeSettings(settings: Partial<UserSettings>);
     gotoLink(record:UrlItem);
+    copyLink(record:UrlItem);
 }
 
 export interface UrlItem {
@@ -35,4 +36,5 @@ export interface MessageAdapter {
     collect: ()=>Promise<ExtensionData>
     changeSettings: (settings: Partial<UserSettings>) => void;
     gotoLink: (data:UrlItem)=> void;
+    copyLink: (data:UrlItem)=> void;
 }

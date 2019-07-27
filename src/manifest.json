@@ -29,5 +29,12 @@
       "match_about_blank": true
     }
   ],
-  "permissions": ["storage", "tabs","activeTab", "<all_urls>"]
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "clipboardRead",
+    "clipboardWrite",
+    "<all_urls>"
+  ]
 }

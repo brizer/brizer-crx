@@ -1,5 +1,5 @@
 import { UserSettings, Message, MessageAdapter, ExtensionData } from '../definitions'
-import { MESSAGE_CHANGE_SETTINGS, UI_NAME, MESSAGE_GET_DATA, MESSAGE_GOTO } from '../const';
+import { MESSAGE_CHANGE_SETTINGS, UI_NAME, MESSAGE_GET_DATA, MESSAGE_GOTO, MESSAGE_COPY_LINK } from '../const';
 
 
 export default class Messenger {
@@ -29,6 +29,10 @@ export default class Messenger {
             }
             case MESSAGE_GOTO: {
                 this.adapter.gotoLink(data)
+                break;
+            }
+            case MESSAGE_COPY_LINK: {
+                this.adapter.copyLink(data)
                 break;
             }
         }
