@@ -7,9 +7,14 @@
     "default_title": "Brizer's tool",
     "default_popup": "ui/popup/index.html",
     "default_icon": {
-      "19": "icons/kt19.png",
-      "38": "icons/kt38.png"
+      "38": "icons/icons8-b-38.png",
+      "19": "icons/icons8-b-19.png"
     }
+  },
+  "icons": {
+    "16": "icons/icons8-b-16.png",
+    "48": "icons/icons8-b-48.png",
+    "128": "icons/icons8-b-64.png"
   },
   "background": {
     "persistent": true,
@@ -24,5 +29,5 @@
       "match_about_blank": true
     }
   ],
-  "permissions": ["storage", "tabs", "<all_urls>"]
+  "permissions": ["storage", "tabs","activeTab", "<all_urls>"]
 }
