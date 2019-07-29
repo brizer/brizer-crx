@@ -2,6 +2,7 @@ import React, { useState, useContext, useRef } from "react";
 import { Table, Form, Input, Button } from "antd";
 import styles from "./Url.less";
 import { UrlItem, ExtensionActions } from "definitions";
+import { GENERATE_TYPE_AWESOME } from "../../../../const";
 
 const UrlContext = React.createContext(null);
 
@@ -191,10 +192,17 @@ const Url = props => {
     actions.copyLink(record)
   }
 
+  function generateAwesomeUrl(){
+    actions.generateUrl({type:GENERATE_TYPE_AWESOME})
+  }
+
   return (
     <div>
-      <Button onClick={handleAdd} type="primary" style={{ marginBottom: 10 }}>
+      <Button className={styles.btn} onClick={handleAdd} type="primary" >
         新增
+      </Button>
+      <Button  className={styles.btn} onClick={generateAwesomeUrl} type="primary">
+        生成awesome-url
       </Button>
       <Table
         components={components}

@@ -1,5 +1,5 @@
 import { UserSettings } from "definitions";
-import { gotoLinks, copyLinks } from "../../inject/link";
+import { gotoLinks, copyLinks, generateUrl } from "../../inject/link";
 
 function getMockData(override = {}) {
     return Object.assign({
@@ -34,6 +34,9 @@ export function createConnectorMock() {
         },
         copyLink(data){
             copyLinks(data)
+        },
+        generateUrl(data){
+            generateUrl(data)
         },
         disconnect(){
 

@@ -7,6 +7,7 @@ export interface ExtensionActions {
     changeSettings(settings: Partial<UserSettings>);
     gotoLink(record:UrlItem);
     copyLink(record:UrlItem);
+    generateUrl(record: GenerateUrlMsg);
 }
 
 export interface UrlItem {
@@ -25,6 +26,10 @@ export interface UserSettings {
     urls:UrlItem[]
 }
 
+export interface GenerateUrlMsg {
+    type: string;
+}
+
 export interface Message {
     type: string;
     data?: any;
@@ -37,4 +42,5 @@ export interface MessageAdapter {
     changeSettings: (settings: Partial<UserSettings>) => void;
     gotoLink: (data:UrlItem)=> void;
     copyLink: (data:UrlItem)=> void;
+    generateLink: (data:GenerateUrlMsg)=> void;
 }

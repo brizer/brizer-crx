@@ -1,5 +1,5 @@
-import { UI_NAME, MESSAGE_CHANGE_SETTINGS, MESSAGE_GET_DATA, MESSAGE_GOTO, MESSAGE_COPY_LINK } from "../../const";
-import { UserSettings, ExtensionData, Message, UrlItem } from "definitions";
+import { UI_NAME, MESSAGE_CHANGE_SETTINGS, MESSAGE_GET_DATA, MESSAGE_GOTO, MESSAGE_COPY_LINK, MESSAGE_GENERATE } from "../../const";
+import { UserSettings, ExtensionData, Message, UrlItem, GenerateUrlMsg } from "definitions";
 
 export default class Connector {
     private port: chrome.runtime.Port;
@@ -41,6 +41,10 @@ export default class Connector {
 
     public copyLink(data:UrlItem){
         this.port.postMessage({type:MESSAGE_COPY_LINK,data:data})
+    }
+
+    public generateUrl(data:GenerateUrlMsg){
+        this.port.postMessage({type:MESSAGE_GENERATE,data:data})
     }
 
     public disconnect() {
