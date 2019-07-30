@@ -1,5 +1,5 @@
 import { UrlItem, GenerateUrlMsg } from "definitions";
-import { GENERATE_TYPE_AWESOME } from "../const";
+import { GENERATE_TYPE_AWESOME, GENERATE_TYPE_REFERENCE } from "../const";
 
 export function gotoLinks(links:UrlItem) {
     const { str, toStr } = links;
@@ -23,7 +23,9 @@ export function generateUrl(data:GenerateUrlMsg){
         case GENERATE_TYPE_AWESOME:
             generateAwesomeUrl()
             break;
-    
+        case GENERATE_TYPE_REFERENCE:
+            generateReferenceUrl()
+            break;
         default:
             break;
     }
@@ -52,5 +54,12 @@ function generateAwesomeUrl() {
     if(desNode && desNode.innerHTML){
         txt += desNode.innerHTML.trim()
     }
+    copyToClipboard(txt)
+}
+
+function generateReferenceUrl(){
+    const url = window.location.href;
+    let txt = '';
+    txt = `[${document.title}](${url})`;
     copyToClipboard(txt)
 }

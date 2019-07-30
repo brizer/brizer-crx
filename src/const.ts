@@ -7,3 +7,4 @@ export const MESSAGE_COPY_LINK = 'copy-link'
 export const MESSAGE_GENERATE = 'generate-link'
 
 export const GENERATE_TYPE_AWESOME = 'awesome'
+export const GENERATE_TYPE_REFERENCE = 'reference'

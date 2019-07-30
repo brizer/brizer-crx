@@ -2,7 +2,7 @@ import React, { useState, useContext, useRef } from "react";
 import { Table, Form, Input, Button } from "antd";
 import styles from "./Url.less";
 import { UrlItem, ExtensionActions } from "definitions";
-import { GENERATE_TYPE_AWESOME } from "../../../../const";
+import { GENERATE_TYPE_AWESOME, GENERATE_TYPE_REFERENCE } from "../../../../const";
 
 const UrlContext = React.createContext(null);
 
@@ -196,6 +196,11 @@ const Url = props => {
     actions.generateUrl({type:GENERATE_TYPE_AWESOME})
   }
 
+  function generateReferenceUrl(){
+    actions.generateUrl({type:GENERATE_TYPE_REFERENCE})
+  }
+
+
   return (
     <div>
       <Button className={styles.btn} onClick={handleAdd} type="primary" >
@@ -203,6 +208,9 @@ const Url = props => {
       </Button>
       <Button  className={styles.btn} onClick={generateAwesomeUrl} type="primary">
         生成awesome-url
+      </Button>
+      <Button  className={styles.btn} onClick={generateReferenceUrl} type="primary">
+        生成引用
       </Button>
       <Table
         components={components}
