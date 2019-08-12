@@ -1,19 +1,22 @@
 import UserStorage from "./userStorage";
 import Messenger from "./messenger";
-import { MessageAdapter, UserSettings, ExtensionData, UrlItem, GenerateUrlMsg } from "definitions";
+import { MessageAdapter, UserSettings, ExtensionData, UrlItem, GenerateUrlMsg, ContextAdapter } from "definitions";
 import { MESSAGE_GOTO, MESSAGE_COPY_LINK, MESSAGE_GENERATE } from "../const";
 import TabManager from "./tabManager";
+import ContextManager from "./contextManager";
 
 export class Extension {
     private ready: boolean;
     private user: UserStorage;
     private messenger: Messenger;
     private tab: TabManager;
+    private context: ContextManager;
     constructor() {
         this.ready = false;
         this.user = new UserStorage();
         this.messenger = new Messenger(this.getMessengerAdapter());
-        this.tab = new TabManager()
+        this.tab = new TabManager();
+        this.context = new ContextManager(this.getContextAdapter());
     }
 
     async start() {
@@ -27,6 +30,12 @@ export class Extension {
             gotoLink: (data) => this.gotoLink(data),
             copyLink: (data) => this.copyLink(data),
             generateLink: (data) => this.generateLink(data)
+        }
+    }
+
+    private getContextAdapter(): ContextAdapter {
+        return {
+            open: (data) => this.gotoLink(data)
         }
     }
 

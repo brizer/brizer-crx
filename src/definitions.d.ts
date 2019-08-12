@@ -44,3 +44,7 @@ export interface MessageAdapter {
     copyLink: (data:UrlItem)=> void;
     generateLink: (data:GenerateUrlMsg)=> void;
 }
+
+export interface ContextAdapter {
+    open: (data:UrlItem)=> void;
+}

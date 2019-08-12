@@ -35,6 +35,7 @@
     "activeTab",
     "clipboardRead",
     "clipboardWrite",
+    "contextMenus",
     "<all_urls>"
   ]
 }
