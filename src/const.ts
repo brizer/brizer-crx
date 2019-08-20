@@ -12,3 +12,7 @@ export const GENERATE_TYPE_REFERENCE_RELATIVE = 'reference_relative'
 
 export const CONTEXT_MEUNITEM_ID_OPEN = 'open'
 export const CONTEXT_MEUNITEM_ID_TRANSLATE = 'translate'
+export const CONTEXT_MEUNITEM_ID_SEARCH_ZHIHU = 'search_zhihu'
+export const CONTEXT_MEUNITEM_ID_SEARCH_JUEJIN = 'search_juejin'
+export const CONTEXT_MEUNITEM_ID_SEARCH_WIKI = 'search_wiki'
+export const CONTEXT_MEUNITEM_ID_SEARCH_GIT = 'search_git'
