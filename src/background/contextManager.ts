@@ -1,5 +1,5 @@
 import { ContextAdapter } from "definitions";
-import { CONTEXT_MEUNITEM_ID_OPEN, CONTEXT_MEUNITEM_ID_TRANSLATE, CONTEXT_MEUNITEM_ID_SEARCH_ZHIHU, CONTEXT_MEUNITEM_ID_SEARCH_JUEJIN, CONTEXT_MEUNITEM_ID_SEARCH_WIKI, CONTEXT_MEUNITEM_ID_SEARCH_GIT } from "../const";
+import { CONTEXT_MEUNITEM_ID_OPEN, CONTEXT_MEUNITEM_ID_TRANSLATE, CONTEXT_MEUNITEM_ID_SEARCH_ZHIHU, CONTEXT_MEUNITEM_ID_SEARCH_JUEJIN, CONTEXT_MEUNITEM_ID_SEARCH_WIKI, CONTEXT_MEUNITEM_ID_SEARCH_GIT, CONTEXT_MEUNITEM_ID_SEARCH_NPM } from "../const";
 
 export default class ContextManager {
     private adapter: ContextAdapter;
@@ -39,6 +39,11 @@ export default class ContextManager {
         chrome.contextMenus.create({
             id:CONTEXT_MEUNITEM_ID_SEARCH_GIT,
             title:'github搜索',
+            contexts: ['selection']
+        });
+        chrome.contextMenus.create({
+            id:CONTEXT_MEUNITEM_ID_SEARCH_NPM,
+            title:'npm搜索',
             contexts: ['selection']
         });
     }
@@ -91,6 +96,14 @@ export default class ContextManager {
                         key: +new Date(),
                         str: info.pageUrl,
                         toStr: `https://github.com/search?q=${info.selectionText}`
+                    })
+                    break;
+                }
+                case CONTEXT_MEUNITEM_ID_SEARCH_NPM: {
+                    this.adapter.open({
+                        key: +new Date(),
+                        str: info.pageUrl,
+                        toStr: `https://www.npmjs.com/search?q=${info.selectionText}`
                     })
                     break;
                 }
