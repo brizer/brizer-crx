@@ -1,5 +1,6 @@
 import { MESSAGE_GOTO, UI_NAME, MESSAGE_COPY_LINK, MESSAGE_GENERATE } from "../const";
 import { gotoLinks, copyLinks, generateUrl } from "./link";
+import { initBrizerHubUI } from "./ui";
 
 function onMessage({ type, data }) {
     switch (type) {
@@ -23,3 +24,7 @@ function onMessage({ type, data }) {
 
 // const port = chrome.runtime.connect({name: UI_NAME})
 chrome.runtime.onMessage.addListener(onMessage)
+
+if(window.location.href.includes('https://github.com/FunnyLiu?') || window.location.href === 'https://github.com/FunnyLiu'){
+    setTimeout(initBrizerHubUI,1000)
+}
