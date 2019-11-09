@@ -20,6 +20,9 @@
     "persistent": true,
     "page": "background/index.html"
   },
+  "chrome_url_overrides": {
+    "newtab": "ui/newtab/index.html"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

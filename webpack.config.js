@@ -5,6 +5,7 @@ const webpack = require("webpack");
 
 module.exports = env => ({
   entry: {
+    "ui/newtab/newtab": "./src/ui/newtab/index.tsx",
     "ui/popup/popup": "./src/ui/popup/index.tsx",
     "background/background": "./src/background/index.ts",
     "inject/index": "./src/inject/index.ts"
@@ -75,6 +76,10 @@ module.exports = env => ({
             }
           }
         ]
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
@@ -83,6 +88,11 @@ module.exports = env => ({
       filename: "./ui/popup/index.html",
       chunks: ["ui/popup/popup"],
       template: path.resolve("./src/ui/popup/index.html")
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./ui/newtab/index.html",
+      chunks: ["ui/newtab/newtab"],
+      template: path.resolve("./src/ui/newtab/index.html")
     }),
     new HtmlWebpackPlugin({
       filename: "./background/index.html",
