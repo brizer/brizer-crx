@@ -13,8 +13,8 @@ const navs:INavs = {
         route:'/'
     },
     nav2:{
-        title:'预留',
-        route:'/url'
+        title:'信息流',
+        route:'/info'
     }
 }
 

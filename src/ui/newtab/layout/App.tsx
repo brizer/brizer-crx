@@ -6,7 +6,7 @@ const { Header, Content, Footer, Sider } = Layout;
 import "antd/dist/antd.css";
 import styles from "./App.less";
 import { INavs } from "../data/nav";
-import Home from "./Home";
+import Info from "./Info";
 import Url from "./Url";
 
 interface AppProps {
@@ -43,7 +43,7 @@ const App: FunctionComponent<any> = (props: AppProps) => {
             <div className={styles.body}>
               {/* 路由解析对接组件 */}
               <Route exact path="/" component={()=><Url />} />
-              <Route exact path="/url" component={()=><Home />} />
+              <Route exact path="/info" component={()=><Info />} />
             </div>
           </Content>
           <Footer className={styles.ftc}>
