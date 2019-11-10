@@ -9,10 +9,9 @@ interface IUrlprops {
 const Url: FunctionComponent<any> = (props: IUrlprops) => {
   return (
     <div>
-      123
-      {Object.keys(urlsGroup).map(k=>{
-        (<Urls title={k} links={urlsGroup[k]}></Urls>)
-      })}
+      {Object.keys(urlsGroup).map((k,i)=>(
+        <Urls key={i} title={k} links={urlsGroup[k]}></Urls>
+      ))}
     </div>
   );
 };

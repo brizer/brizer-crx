@@ -26,7 +26,7 @@ const App: FunctionComponent<any> = (props: AppProps) => {
           }}
         >
           <div className="logo" />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={["4"]}>
+          <Menu theme="dark" mode="inline" defaultSelectedKeys={["0"]}>
             {/* navs in left */}
             {Object.keys(props.navs).map((k, i) => (
               <Menu.Item key={i}>
@@ -42,8 +42,8 @@ const App: FunctionComponent<any> = (props: AppProps) => {
           <Content style={{ margin: "24px 16px 0", overflow: "initial" }}>
             <div className={styles.body}>
               {/* 路由解析对接组件 */}
-              <Route exact path="/" component={Home} />
-              <Route exact path="/url" component={Url} />
+              <Route exact path="/" component={()=><Url />} />
+              <Route exact path="/url" component={()=><Home />} />
             </div>
           </Content>
           <Footer className={styles.ftc}>
