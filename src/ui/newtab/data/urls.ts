@@ -19,6 +19,10 @@ const urls: IUrlsGroup = {
     {
       url: "https://github.com/FunnyLiu",
       name: "源码分析库"
+    },
+    {
+      url: "https://omnipotent-front-end.github.io/",
+      name: "基础知识库"
     }
   ],
   '常用开源快速导航': [

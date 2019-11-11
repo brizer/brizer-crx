@@ -4,8 +4,9 @@
   "description": "Brizer's crx tool",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev",
     "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js --open --progress --hot",
-    "build": "cross-env NODE_ENV=development webpack --config webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
