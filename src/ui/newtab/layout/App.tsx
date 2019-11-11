@@ -8,6 +8,7 @@ import styles from "./App.less";
 import { INavs } from "../data/nav";
 import Info from "./Info";
 import Url from "./Url";
+import Banner from "../components/Banner";
 
 interface AppProps {
   navs: INavs;
@@ -38,7 +39,9 @@ const App: FunctionComponent<any> = (props: AppProps) => {
           </Menu>
         </Sider>
         <Layout style={{ marginLeft: 200 }}>
-          <Header className={styles.header} />
+          <Header className={styles.header} >
+            <Banner />
+          </Header>
           <Content style={{ margin: "24px 16px 0", overflow: "initial" }}>
             <div className={styles.body}>
               {/* 路由解析对接组件 */}
