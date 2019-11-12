@@ -12,7 +12,7 @@ const Info: FunctionComponent<any> = (props: IInfoprops) => {
     infoConfig.map(v => {
       if(!v.enable){return}
       fetchList.push(
-        fetch(v.fetch)
+        fetch(v.fetch,v.fetchObj||{})
           .then(v.cb)
       );
     });
