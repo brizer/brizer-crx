@@ -104,6 +104,28 @@ const infoConfig: InfoConfigList = [
     }
   },
   {
+    enable:true,
+    fetch:process.env.NODE_ENV === "production"?"https://medium.com/tag/javascript":"/api/medium.html",
+    title: "medium",
+    cb: async function(data:any) {
+      data = await data.text();
+      const regex = /window\[\"obvInit\"\]\((.*)\)\n\/\/\s\]\]\>/;
+      const res = data.match(regex);
+      const infoObj = JSON.parse(res[1]);
+      const list: InfoList = [];
+      Object.keys(infoObj.references.Post).map(v=>{
+        isMyKey(infoObj.references.Post[v].title) &&
+        list.push({
+          name:infoObj.references.Post[v].title,
+          link:`https://medium.com/javascript-scene/${infoObj.references.Post[v].uniqueSlug}`,
+          title:'medium'
+        })
+      })
+      console.warn(infoObj);
+      return Promise.resolve(list);
+    }
+  },
+  {
     enable: process.env.NODE_ENV === "production",
     fetch:
       "https://www.yuque.com/api/books/75258/docs?include_contributors=true&include_hits=true&limit=20&offset=0",

@@ -4,6 +4,10 @@
         "GET /api/cnode.json":
         {
             "path": "/api/cnode.json"
+        },
+        "GET /api/medium.html":
+        {
+            "path": "/api/medium.html"
         }
     }
 }
