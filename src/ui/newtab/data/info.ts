@@ -21,7 +21,7 @@ export type InfoConfigList = IInfoConfig[];
 const infoConfig: InfoConfigList = [
   {
     enable: true,
-    fetch: "https://cnodejs.org/api/v1/topics",
+    fetch: process.env.NODE_ENV === "production"?"https://cnodejs.org/api/v1/topics":'/api/cnode.json',
     title: "CNode社区",
     cb: async function(data: any) {
       data = await data.json();

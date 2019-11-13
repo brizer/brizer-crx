@@ -2,13 +2,13 @@
   "name": "brizer-crx",
   "version": "1.0.0",
   "description": "Brizer's crx tool",
-  "main": "index.js",
   "scripts": {
     "start": "npm run dev",
     "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js --open --progress --hot",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "clean": "rimraf dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mock": "httpmock 8010"
   },
   "repository": {
     "type": "git",
@@ -52,6 +52,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "http-mockjs": "^3.3.4",
     "react-router-dom": "^5.0.1"
   }
 }

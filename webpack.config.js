@@ -2,6 +2,7 @@ const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const { mocker } = require("http-mockjs");
 
 module.exports = env => ({
   entry: {
@@ -21,7 +22,10 @@ module.exports = env => ({
   devtool: "source-map",
   devServer: {
     contentBase: path.resolve(__dirname, "./dist"),
-    hot: true
+    hot: true,
+    before:(app)=>{
+      mocker(app)
+    }
   },
   module: {
     rules: [

@@ -1,0 +1,9 @@
+{
+    "mockFileName":"mocks",
+    "routes":{
+        "GET /api/cnode.json":
+        {
+            "path": "/api/cnode.json"
+        }
+    }
+}
