@@ -14,7 +14,7 @@ export interface IInfoListItem {
   title: string;
 }
 
-type InfoList = IInfoListItem[];
+export type InfoList = IInfoListItem[];
 
 export type InfoConfigList = IInfoConfig[];
 
