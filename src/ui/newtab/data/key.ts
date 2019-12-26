@@ -20,7 +20,9 @@ const keys: string[] = [
   "前端",
   "性能",
   "监控",
-  "工程化"
+  "工程化",
+  "微信",
+  "CRM"
 ];
 
 export function isMyKey(str:string){
