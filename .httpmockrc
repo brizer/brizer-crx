@@ -8,6 +8,18 @@
         "GET /api/medium.html":
         {
             "path": "/api/medium.html"
+        },
+        "GET /api/github/trend/weekly/all.html": 
+        {
+            "path": "/api/github/trend/weekly/all.html"
+        },
+        "GET /api/github/trend/weekly/javascript.html": 
+        {
+            "path": "/api/github/trend/weekly/javascript.html"
+        },
+        "GET /api/github/trend/weekly/typescript.html": 
+        {
+            "path": "/api/github/trend/weekly/typescript.html"
         }
     }
 }

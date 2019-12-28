@@ -7,6 +7,7 @@ import "antd/dist/antd.css";
 import styles from "./App.less";
 import { INavs } from "../data/nav";
 import Info from "./Info";
+import Open from "./Open";
 import Url from "./Url";
 import Banner from "../components/Banner";
 
@@ -47,6 +48,7 @@ const App: FunctionComponent<any> = (props: AppProps) => {
               {/* 路由解析对接组件 */}
               <Route exact path="/" component={()=><Url />} />
               <Route exact path="/info" component={()=><Info />} />
+              <Route exact path="/open" component={()=><Open />} />
             </div>
           </Content>
           <Footer className={styles.ftc}>

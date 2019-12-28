@@ -15,6 +15,10 @@ const navs:INavs = {
     nav2:{
         title:'信息流',
         route:'/info'
+    },
+    nav3:{
+        title:'Github汇总',
+        route:'/open'
     }
 }
 

@@ -1,22 +1,6 @@
 import { isMyKey } from "./key";
+import { InfoConfigList, InfoList } from "definitions";
 
-export interface IInfoConfig {
-  enable: boolean;
-  fetch: RequestInfo;
-  fetchObj?: RequestInit;
-  title: string;
-  cb: (data: any) => Promise<InfoList>;
-}
-
-export interface IInfoListItem {
-  name: string;
-  link: string;
-  title: string;
-}
-
-export type InfoList = IInfoListItem[];
-
-export type InfoConfigList = IInfoConfig[];
 
 const infoConfig: InfoConfigList = [
   {

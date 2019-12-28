@@ -1,19 +1,19 @@
 import React, { FunctionComponent, useState } from "react";
-import infoConfig from "../data/info";
-import Articles from "../components/Articles";
+import infoConfig from "../data/open";
+
+import Cards from "../components/Cards";
 import useFetchInfo from "../../../hooks/useFetchInfo";
 
-interface IInfoprops {}
+interface IOpenprops {}
 
-const Info: FunctionComponent<any> = (props: IInfoprops) => {
+const Info: FunctionComponent<any> = (props: IOpenprops) => {
   const [infoList, setInfoList] = useState([]);
-  
-  useFetchInfo(infoConfig,setInfoList,[]);
 
+  useFetchInfo(infoConfig,setInfoList,[]);
   return (
     <div>
       {Object.keys(infoList).map(k => (
-        <Articles key={k} list={infoList[k]}></Articles>
+        <Cards key={k} list={infoList[k]}></Cards>
       ))}
     </div>
   );

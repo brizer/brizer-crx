@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styles from "./Articles.less";
-import { IInfoListItem } from "../data/info";
+import { IInfoListItem } from "definitions";
 
 interface IArticlesProps {
   list: IInfoListItem[];

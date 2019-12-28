@@ -48,3 +48,21 @@ export interface MessageAdapter {
 export interface ContextAdapter {
     open: (data:UrlItem)=> void;
 }
+
+export interface IInfoConfig {
+    enable: boolean;
+    fetch: RequestInfo;
+    fetchObj?: RequestInit;
+    title: string;
+    cb: (data: any) => Promise<InfoList>;
+  }
+  
+  export interface IInfoListItem {
+    name: string;
+    link: string;
+    title: string;
+  }
+  
+  export type InfoList = IInfoListItem[];
+  
+  export type InfoConfigList = IInfoConfig[];
