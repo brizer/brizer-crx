@@ -23,6 +23,14 @@ const urls: IUrlsGroup = {
     {
       url: "https://omnipotent-front-end.github.io/",
       name: "基础知识库"
+    },
+    {
+      url: "https://github.com/omnipotent-front-end/blog",
+      name: "github博客"
+    },
+    {
+      url: "https://blog.csdn.net/mevicky",
+      name: "CSDN博客"
     }
   ],
   '常用开源快速导航': [
@@ -33,6 +41,14 @@ const urls: IUrlsGroup = {
     {
       url: 'https://github.com/brizer/http-mocker',
       name: 'http-mocker'
+    },
+    {
+      url: 'https://github.com/Linjovi/yoso',
+      name: 'yoso'
+    },
+    {
+      url: 'https://github.com/WebRookieSyb/rollup-to-nej',
+      name: 'rollup-to-nej'
     }
   ]
 };

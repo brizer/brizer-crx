@@ -20,6 +20,10 @@
         "GET /api/github/trend/weekly/typescript.html": 
         {
             "path": "/api/github/trend/weekly/typescript.html"
+        },
+        "GET /api/rss/githubActive.json":
+        {
+            "path": "/api/rss/githubActive.xml"
         }
     }
 }

@@ -57,6 +57,7 @@
   "dependencies": {
     "http-mockjs": "^3.3.4",
     "promise.allsettled": "^1.0.1",
-    "react-router-dom": "^5.0.1"
+    "react-router-dom": "^5.0.1",
+    "rss-parser": "^3.7.3"
   }
 }

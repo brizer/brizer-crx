@@ -51,16 +51,21 @@ export interface ContextAdapter {
 
 export interface IInfoConfig {
     enable: boolean;
-    fetch: RequestInfo;
+    fetch: string;
     fetchObj?: RequestInit;
     title: string;
     cb: (data: any) => Promise<InfoList>;
   }
   
   export interface IInfoListItem {
-    name: string;
-    link: string;
-    title: string;
+    name?: string;
+    link?: string;
+    title?: string;
+    html?: string;
+  }
+
+  export interface ICustomInfoListItem {
+    html:string
   }
   
   export type InfoList = IInfoListItem[];
