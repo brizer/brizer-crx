@@ -24,6 +24,10 @@
         "GET /api/rss/githubActive.json":
         {
             "path": "/api/rss/githubActive.xml"
+        },
+        "GET /api/rss/openingsource.json":
+        {
+            "path": "/api/rss/openingsource.xml"
         }
     }
 }

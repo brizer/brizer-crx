@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>开源工场</title>
+	<atom:link href="https://openingsource.org/feed/" rel="self" type="application/rss+xml" />
+	<link>https://openingsource.org</link>
+	<description>Opening Source</description>
+	<lastBuildDate>Tue, 07 Jan 2020 02:38:17 +0000</lastBuildDate>
+	<language>zh-CN</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+<image>
+	<url>https://openingsource.org/wp-content/uploads/2018/01/cropped-portrait_logo-32x32.png</url>
+	<title>开源工场</title>
+	<link>https://openingsource.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>开源日报第665期：《Python精选 Awesome Python》</title>
+		<link>https://openingsource.org/8467/</link>
+				<comments>https://openingsource.org/8467/#respond</comments>
+				<pubDate>Wed, 08 Jan 2020 23:00:37 +0000</pubDate>
+		<dc:creator><![CDATA[叫我建ye吧]]></dc:creator>
+				<category><![CDATA[开源日报]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">https://openingsource.org/?p=8467</guid>
+				<description><![CDATA[<p>今日推荐开源项目：《Python精选 Awesome Python》；今日推荐英文原文：《How to Stay Motivated — When it’s Easier to Stop》；</p>
+<p>The post <a rel="nofollow" href="https://openingsource.org/8467/">开源日报第665期：《Python精选 Awesome Python》</a> appeared first on <a rel="nofollow" href="https://openingsource.org">开源工场</a>.</p>
+]]></description>
+						<wfw:commentRss>https://openingsource.org/8467/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>开源日报第664期：《第三方登录的开源库: JustAuth》</title>
+		<link>https://openingsource.org/8512/</link>
+				<comments>https://openingsource.org/8512/#respond</comments>
+				<pubDate>Tue, 07 Jan 2020 23:00:37 +0000</pubDate>
+		<dc:creator><![CDATA[ironhan]]></dc:creator>
+				<category><![CDATA[开源日报]]></category>
+		<category><![CDATA[office]]></category>
+		<category><![CDATA[opensource]]></category>
+
+		<guid isPermaLink="false">https://openingsource.org/?p=8512</guid>
+				<description><![CDATA[<p>今日推荐开源项目：《第三方登录的开源库: JustAuth》；今日推荐英文原文：《Open Source Office Suites Can Replace Microsoft Office》；</p>
+<p>The post <a rel="nofollow" href="https://openingsource.org/8512/">开源日报第664期：《第三方登录的开源库: JustAuth》</a> appeared first on <a rel="nofollow" href="https://openingsource.org">开源工场</a>.</p>
+]]></description>
+						<wfw:commentRss>https://openingsource.org/8512/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>开源日报第663期：《或者是另一个 30-Days-Of-Python》</title>
+		<link>https://openingsource.org/8514/</link>
+				<comments>https://openingsource.org/8514/#respond</comments>
+				<pubDate>Mon, 06 Jan 2020 23:00:48 +0000</pubDate>
+		<dc:creator><![CDATA[咪喵]]></dc:creator>
+				<category><![CDATA[开源日报]]></category>
+		<category><![CDATA[30-Days-Of-Python]]></category>
+
+		<guid isPermaLink="false">https://openingsource.org/?p=8514</guid>
+				<description><![CDATA[<p>今日推荐开源项目：《或者是另一个 30-Days-Of-Python》；今日推荐英文原文：《Mastering JS console.log like a Pro》；</p>
+<p>The post <a rel="nofollow" href="https://openingsource.org/8514/">开源日报第663期：《或者是另一个 30-Days-Of-Python》</a> appeared first on <a rel="nofollow" href="https://openingsource.org">开源工场</a>.</p>
+]]></description>
+						<wfw:commentRss>https://openingsource.org/8514/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>开源日报第662期：《新开始 30DaysOfJavaScript》</title>
+		<link>https://openingsource.org/8513/</link>
+				<comments>https://openingsource.org/8513/#respond</comments>
+				<pubDate>Sun, 05 Jan 2020 23:00:47 +0000</pubDate>
+		<dc:creator><![CDATA[咪喵]]></dc:creator>
+				<category><![CDATA[开源日报]]></category>
+		<category><![CDATA[30DaysOfJavaScript]]></category>
+
+		<guid isPermaLink="false">https://openingsource.org/?p=8513</guid>
+				<description><![CDATA[<p>今日推荐开源项目：《新开始 30DaysOfJavaScript》；今日推荐英文原文：《Ugly Truths About Working From Home》；</p>
+<p>The post <a rel="nofollow" href="https://openingsource.org/8513/">开源日报第662期：《新开始 30DaysOfJavaScript》</a> appeared first on <a rel="nofollow" href="https://openingsource.org">开源工场</a>.</p>
+]]></description>
+						<wfw:commentRss>https://openingsource.org/8513/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>开源日报第661期：《城市建造 isocity》</title>
+		<link>https://openingsource.org/8470/</link>
+				<comments>https://openingsource.org/8470/#respond</comments>
+				<pubDate>Sat, 04 Jan 2020 23:00:59 +0000</pubDate>
+		<dc:creator><![CDATA[咪喵]]></dc:creator>
+				<category><![CDATA[开源日报]]></category>
+		<category><![CDATA[isocity]]></category>
+
+		<guid isPermaLink="false">https://openingsource.org/?p=8470</guid>
+				<description><![CDATA[<p>今日推荐开源项目：《城市建造 isocity》；今日推荐英文原文：《Is Your Traditional Daily Standup Meeting Wasting Your Time? Do It Differently》；</p>
+<p>The post <a rel="nofollow" href="https://openingsource.org/8470/">开源日报第661期：《城市建造 isocity》</a> appeared first on <a rel="nofollow" href="https://openingsource.org">开源工场</a>.</p>
+]]></description>
+						<wfw:commentRss>https://openingsource.org/8470/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>开源日报第660期：《NTB nodetube》</title>
+		<link>https://openingsource.org/8469/</link>
+				<comments>https://openingsource.org/8469/#respond</comments>
+				<pubDate>Fri, 03 Jan 2020 23:00:19 +0000</pubDate>
+		<dc:creator><![CDATA[咪喵]]></dc:creator>
+				<category><![CDATA[开源日报]]></category>
+		<category><![CDATA[nodetube]]></category>
+
+		<guid isPermaLink="false">https://openingsource.org/?p=8469</guid>
+				<description><![CDATA[<p>今日推荐开源项目：《NTB nodetube》；今日推荐英文原文：《Tips to Improve Your Code Today》；</p>
+<p>The post <a rel="nofollow" href="https://openingsource.org/8469/">开源日报第660期：《NTB nodetube》</a> appeared first on <a rel="nofollow" href="https://openingsource.org">开源工场</a>.</p>
+]]></description>
+						<wfw:commentRss>https://openingsource.org/8469/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>开源日报第659期：《数独答案生成器AI_Sudoku》</title>
+		<link>https://openingsource.org/8413/</link>
+				<comments>https://openingsource.org/8413/#respond</comments>
+				<pubDate>Thu, 02 Jan 2020 23:00:46 +0000</pubDate>
+		<dc:creator><![CDATA[叫我建ye吧]]></dc:creator>
+				<category><![CDATA[开源日报]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">https://openingsource.org/?p=8413</guid>
+				<description><![CDATA[<p>今日推荐开源项目：《数独答案生成器AI_Sudoku》；今日推荐英文原文：《Should You Use The Most Dangerous Writing App?》；</p>
+<p>The post <a rel="nofollow" href="https://openingsource.org/8413/">开源日报第659期：《数独答案生成器AI_Sudoku》</a> appeared first on <a rel="nofollow" href="https://openingsource.org">开源工场</a>.</p>
+]]></description>
+						<wfw:commentRss>https://openingsource.org/8413/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>开源日报第658期：《spring boot demo》</title>
+		<link>https://openingsource.org/8422/</link>
+				<comments>https://openingsource.org/8422/#respond</comments>
+				<pubDate>Wed, 01 Jan 2020 23:00:36 +0000</pubDate>
+		<dc:creator><![CDATA[ironhan]]></dc:creator>
+				<category><![CDATA[开源日报]]></category>
+		<category><![CDATA[demo]]></category>
+		<category><![CDATA[Open Source Software]]></category>
+
+		<guid isPermaLink="false">https://openingsource.org/?p=8422</guid>
+				<description><![CDATA[<p>今日推荐开源项目：《spring boot demo》；今日推荐英文原文：《A Brief History of Open Source Software》；</p>
+<p>The post <a rel="nofollow" href="https://openingsource.org/8422/">开源日报第658期：《spring boot demo》</a> appeared first on <a rel="nofollow" href="https://openingsource.org">开源工场</a>.</p>
+]]></description>
+						<wfw:commentRss>https://openingsource.org/8422/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

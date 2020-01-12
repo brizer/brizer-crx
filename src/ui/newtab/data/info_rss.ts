@@ -14,6 +14,7 @@ const rssInfoConfig: InfoConfigList = [
           const dom = parseStr2Dom(item.content)
           dom.querySelectorAll('a').forEach(a=>{
             a.href = a.href.replace('http://localhost:8080','https://github.com')
+            a.href = a.href.replace('chrome-extension://aiamdndkdojgeapcfogadmhkahapcjdc','https://github.com')
             a.target='_blank';
           })
           if(dom.querySelector('.watch_started')){
@@ -25,6 +26,25 @@ const rssInfoConfig: InfoConfigList = [
       })
       return Promise.resolve(list);
     }
+  },
+  {
+    enable: true,
+    fetch: process.env.NODE_ENV === "production"?"https://openingsource.org/feed/":'/api/rss/openingsource.json',
+    title: "开源工厂",
+    cb: async function(data: any) {
+      const { items } = data;
+      console.error(data);
+      const list:InfoList =  [];
+      items.map(item=>{
+          list.push({
+            name:item.title,
+            link:item.link,
+            title:'开源工厂日报'
+          })
+      })
+      return Promise.resolve(list);
+    }
+   
   }
 ];
 export default rssInfoConfig;
