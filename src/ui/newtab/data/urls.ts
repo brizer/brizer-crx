@@ -9,7 +9,7 @@ export interface IUrl {
 const urls: IUrlsGroup = {
   '日常': [
     {
-      url: "http://cloud.netease.com/vpn",
+      url: "http://cloud-i.netease.com/vpn",
       name: "网易vpn"
     },
     {
