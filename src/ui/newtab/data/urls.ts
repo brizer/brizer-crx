@@ -13,6 +13,10 @@ const urls: IUrlsGroup = {
       name: "网易vpn"
     },
     {
+      url: "http://cloud.netease.com/vpn",
+      name: "网易vpn2"
+    },
+    {
       url: "https://brizer.github.io/urls/zh/api.html",
       name: "awesome-url"
     },
@@ -49,6 +53,14 @@ const urls: IUrlsGroup = {
     {
       url: 'https://github.com/WebRookieSyb/rollup-to-nej',
       name: 'rollup-to-nej'
+    },
+    {
+      url: 'https://github.com/tomato-js/tomato',
+      name: '@tomato-js'
+    },
+    {
+      url: 'https://github.com/tomato-js/examples',
+      name: '@tomato-js/examples'
     }
   ]
 };
