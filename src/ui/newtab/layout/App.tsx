@@ -10,6 +10,7 @@ import Info from "./Info";
 import Open from "./Open";
 import Url from "./Url";
 import Banner from "../components/Banner";
+import Editor from "./Editor";
 
 interface AppProps {
   navs: INavs;
@@ -49,6 +50,7 @@ const App: FunctionComponent<any> = (props: AppProps) => {
               <Route exact path="/" component={()=><Url />} />
               <Route exact path="/info" component={()=><Info />} />
               <Route exact path="/open" component={()=><Open />} />
+              <Route exact path="/editor" component={()=><Editor />} />
             </div>
           </Content>
           <Footer className={styles.ftc}>

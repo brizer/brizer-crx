@@ -19,6 +19,10 @@ const navs:INavs = {
     nav3:{
         title:'Github汇总',
         route:'/open'
+    },
+    nav4:{
+        title:'编辑器',
+        route:'/editor'
     }
 }
 
