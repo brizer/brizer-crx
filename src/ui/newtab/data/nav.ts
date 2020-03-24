@@ -23,6 +23,10 @@ const navs:INavs = {
     nav4:{
         title:'编辑器',
         route:'/editor'
+    },
+    nav5:{
+        title:'数据对比',
+        route:'/comparsion'
     }
 }
 

@@ -11,6 +11,7 @@ import Open from "./Open";
 import Url from "./Url";
 import Banner from "../components/Banner";
 import Editor from "./Editor";
+import Comparsion from "./Comparsion";
 
 interface AppProps {
   navs: INavs;
@@ -51,6 +52,7 @@ const App: FunctionComponent<any> = (props: AppProps) => {
               <Route exact path="/info" component={()=><Info />} />
               <Route exact path="/open" component={()=><Open />} />
               <Route exact path="/editor" component={()=><Editor />} />
+              <Route exact path="/comparsion" component={()=><Comparsion />} />
             </div>
           </Content>
           <Footer className={styles.ftc}>

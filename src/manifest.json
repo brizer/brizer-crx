@@ -16,6 +16,7 @@
     "48": "icons/icons8-b-48.png",
     "128": "icons/icons8-b-64.png"
   },
+  "content_security_policy": "script-src 'self' blob: filesystem: 'unsafe-eval'; object-src 'self'",
   "background": {
     "persistent": true,
     "page": "background/index.html"
