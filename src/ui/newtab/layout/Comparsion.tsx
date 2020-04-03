@@ -33,6 +33,16 @@ const Comparsion: FunctionComponent<any> = (props: IComparsionProps) => {
           链接
         </a>
       )
+    },
+    {
+      title: "历史价格",
+      dataIndex: "historyLink",
+      key: "historyLink",
+      render: text => (
+        <a target="_blank" href={text}>
+          链接
+        </a>
+      )
     }
   ];
   function formatList(list) {

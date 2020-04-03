@@ -26,7 +26,10 @@ function getSwitchCardsInfo(cards) {
             name: name,
             myNumber: myNumber,
             number,
-            link: `https://item.taobao.com/item.htm?id=${id}`
+            link: `https://item.taobao.com/item.htm?id=${id}`,
+            historyLink: `https://tool.manmanbuy.com/historyLowest.aspx?url=${encodeURIComponent(
+              `https://item.taobao.com/item.htm?id=${id}`
+            )}`
           }
         ];
         return Promise.resolve(list);
