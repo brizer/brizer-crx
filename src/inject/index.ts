@@ -1,6 +1,7 @@
-import { MESSAGE_GOTO, UI_NAME, MESSAGE_COPY_LINK, MESSAGE_GENERATE } from "../const";
+import { MESSAGE_GOTO, UI_NAME, MESSAGE_COPY_LINK, MESSAGE_GENERATE, MESSAGE_ADDCSS } from "../const";
 import { gotoLinks, copyLinks, generateUrl } from "./link";
 import { initBrizerHubUI } from "./ui";
+import { addCss } from './style';
 
 function onMessage({ type, data }) {
     switch (type) {
@@ -16,6 +17,10 @@ function onMessage({ type, data }) {
         }
         case MESSAGE_GENERATE: {
             generateUrl(data)
+            break;
+        }
+        case MESSAGE_ADDCSS: {
+            addCss(data)
             break;
         }
     }

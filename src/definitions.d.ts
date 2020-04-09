@@ -8,6 +8,7 @@ export interface ExtensionActions {
     gotoLink(record:UrlItem);
     copyLink(record:UrlItem);
     generateUrl(record: GenerateUrlMsg);
+    addCss(record: string);
 }
 
 export interface UrlItem {
@@ -43,6 +44,7 @@ export interface MessageAdapter {
     gotoLink: (data:UrlItem)=> void;
     copyLink: (data:UrlItem)=> void;
     generateLink: (data:GenerateUrlMsg)=> void;
+    addCss: (data:string)=> void;
 }
 
 export interface ContextAdapter {

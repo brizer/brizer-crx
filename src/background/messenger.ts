@@ -1,5 +1,5 @@
 import { UserSettings, Message, MessageAdapter, ExtensionData } from '../definitions'
-import { MESSAGE_CHANGE_SETTINGS, UI_NAME, MESSAGE_GET_DATA, MESSAGE_GOTO, MESSAGE_COPY_LINK, MESSAGE_GENERATE } from '../const';
+import { MESSAGE_CHANGE_SETTINGS, UI_NAME, MESSAGE_GET_DATA, MESSAGE_GOTO, MESSAGE_COPY_LINK, MESSAGE_GENERATE, MESSAGE_ADDCSS } from '../const';
 
 
 export default class Messenger {
@@ -37,6 +37,10 @@ export default class Messenger {
             }
             case MESSAGE_GENERATE: {
                 this.adapter.generateLink(data)
+                break;
+            }
+            case MESSAGE_ADDCSS: {
+                this.adapter.addCss(data)
                 break;
             }
         }

@@ -56,6 +56,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "@tomato-js/element": "0.0.14",
     "@tomato-js/function": "0.0.11",
     "codemirror": "^5.52.2",
     "http-mockjs": "^3.3.4",

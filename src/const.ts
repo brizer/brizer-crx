@@ -5,6 +5,7 @@ export const MESSAGE_CHANGE_SETTINGS = 'change-settings'
 export const MESSAGE_GOTO = 'goto-link'
 export const MESSAGE_COPY_LINK = 'copy-link'
 export const MESSAGE_GENERATE = 'generate-link'
+export const MESSAGE_ADDCSS = 'add-css'
 
 export const GENERATE_TYPE_AWESOME = 'awesome'
 export const GENERATE_TYPE_REFERENCE = 'reference'
