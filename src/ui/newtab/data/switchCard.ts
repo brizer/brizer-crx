@@ -1,15 +1,5 @@
 export const switchCards = [
   {
-    id: "597144407844",
-    name: "龙之信条",
-    myNumber: 160
-  },
-  {
-    id: "599488492818",
-    name: "火焰纹章",
-    myNumber: 365
-  },
-  {
     id: "594309708478",
     name: "马里奥派对",
     myNumber: 355
@@ -22,16 +12,16 @@ export const switchCards = [
   {
     id: "597609869109",
     name: "火影忍者",
-    myNumber:0
-  },
-  {
-    id: "596296784247",
-    name: "勇者斗恶龙建造2",
-    myNumber:0
+    myNumber:310
   },
   {
     id: "594655683834",
     name: "任天堂大乱斗",
+    myNumber:310
+  },
+  {
+    id: "596296784247",
+    name: "勇者斗恶龙建造2",
     myNumber:0
   },
   {
@@ -42,6 +32,21 @@ export const switchCards = [
   {
     id: "598550185165",
     name: "传送门骑士",
+    myNumber:0
+  },
+  {
+    id: "596341205363",
+    name: "八途旅人",
+    myNumber:0
+  },
+  {
+    id: "595633988233",
+    name: "重返德军总部2",
+    myNumber:0
+  },
+  {
+    id: "613262463584",
+    name: "暗黑血统创世纪",
     myNumber:0
   }
 ];
