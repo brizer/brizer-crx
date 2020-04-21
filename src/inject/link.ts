@@ -46,16 +46,17 @@ async function copyToClipboard(text: string) {
 
 function generateAwesomeUrl() {
     const url = window.location.href;
-    const rgx = /https?:\/\/github\.com\/.*\/(.*)/;
+    const rgx = /https?:\/\/github\.com\/(.*)\/(.*)/;
     const result = url.match(rgx)
     let txt = '';
     if (result && result.length > 1) {
-        txt = `- [${result[1]}](${url}) - `
+        txt = `- [${result[2]}](${url}) - `
     }
     const desNode = document.querySelector('.text-gray-dark.mr-2');
     if (desNode && desNode.innerHTML) {
         txt += desNode.innerHTML.trim()
     }
+    txt = `${txt} ![img](https://img.shields.io/github/stars/${result[1]}/${result[2]})`
     copyToClipboard(txt)
 }
 
