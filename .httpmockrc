@@ -25,6 +25,10 @@
         {
             "path": "/api/taobao/dargon.html"
         },
+        "GET /api/taobao/tmail.html": 
+        {
+            "path": "/api/taobao/tmail.html"
+        },
         "GET /api/rss/githubActive.json":
         {
             "path": "/api/rss/githubActive.xml"

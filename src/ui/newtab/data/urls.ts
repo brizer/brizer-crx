@@ -61,6 +61,14 @@ const urls: IUrlsGroup = {
     {
       url: 'https://github.com/tomato-js/examples',
       name: '@tomato-js/examples'
+    },
+    {
+      url: 'https://github.com/brizer/source-reader',
+      name: 'source-reader'
+    },
+    {
+      url: 'https://github.com/brizer/-Design-Patterns-Typescript',
+      name: '-Design-Patterns-Typescript'
     }
   ]
 };
