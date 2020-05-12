@@ -5,19 +5,14 @@ export const switchCards = [
     myNumber: 355
   },
   {
-    id: "608111128745",
-    name: "胡闹厨房",
-    myNumber: 225
-  },
-  {
-    id: "597609869109",
-    name: "火影忍者",
-    myNumber:310
-  },
-  {
     id: "594655683834",
     name: "任天堂大乱斗",
     myNumber:310
+  },
+  {
+    id: "594311937105",
+    name: "暗黑破坏神3（标准版）",
+    myNumber:210
   },
   {
     id: "596296784247",

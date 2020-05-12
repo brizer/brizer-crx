@@ -22,9 +22,14 @@ const keys: string[] = [
   "监控",
   "工程化",
   "微信",
-  "CRM"
+  "小程序",
+  "机器人",
+  "CRM",
+  "基础",
+  "面试",
+  "架构",
 ];
 
-export function isMyKey(str:string){
-    return keys.some(v=>str.toLocaleLowerCase().includes(v))
+export function isMyKey(str: string) {
+  return keys.some((v) => str.toLocaleLowerCase().includes(v));
 }

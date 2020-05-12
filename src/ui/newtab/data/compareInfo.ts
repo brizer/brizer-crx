@@ -79,7 +79,7 @@ infoConfig = infoConfig.concat(getTmailInfo([
   {
     id: "608318100477",
     name: "switch国行手柄",
-    myNumber: 0
+    myNumber: 459
   }
 ]))
 export default infoConfig;
