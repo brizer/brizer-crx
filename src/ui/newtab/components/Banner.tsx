@@ -12,8 +12,12 @@ const Banner: FunctionComponent<any> = (props: IBannerProps) => {
   const [SearchInfo, setSearchInfo] = useState(search);
   const [CurSearch, setCurSearch] = useState(SearchInfo[0]);
 
-  function gotoSearch(str: string) {
-    const { link } = CurSearch;
+  async function gotoSearch(str: string) {
+    const { link,onClick } = CurSearch;
+    if(!link){
+      onClick.call(undefined,str);
+      return;
+    }
     const name = str;
     const url = link.replace('${name}',name);
     window.open(`${url}`);
@@ -25,7 +29,8 @@ const Banner: FunctionComponent<any> = (props: IBannerProps) => {
       enable:true,
       label: cur.label,
       placeholder: cur.placeholder,
-      link: cur.link
+      link: cur.link,
+      onClick: cur.onClick
     });
   }
   return (
