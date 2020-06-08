@@ -1,6 +1,6 @@
 import { UserSettings } from "definitions";
 import { gotoLinks, copyLinks, generateUrl } from "../../inject/link";
-import { addCss } from "../../inject/style";
+import { addCss,openEdit } from "../../inject/style";
 
 function getMockData(override = {}) {
     return Object.assign({
@@ -41,6 +41,9 @@ export function createConnectorMock() {
         },
         addCss(data){
             addCss(data)
+        },
+        openEdit(){
+            openEdit()
         },
         disconnect(){
 

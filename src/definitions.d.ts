@@ -9,6 +9,7 @@ export interface ExtensionActions {
     copyLink(record:UrlItem);
     generateUrl(record: GenerateUrlMsg);
     addCss(record: string);
+    openEdit();
 }
 
 export interface UrlItem {
@@ -45,6 +46,7 @@ export interface MessageAdapter {
     copyLink: (data:UrlItem)=> void;
     generateLink: (data:GenerateUrlMsg)=> void;
     addCss: (data:string)=> void;
+    openEdit: ()=>void;
 }
 
 export interface ContextAdapter {

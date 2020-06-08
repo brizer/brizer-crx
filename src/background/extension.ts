@@ -1,7 +1,7 @@
 import UserStorage from "./userStorage";
 import Messenger from "./messenger";
 import { MessageAdapter, UserSettings, ExtensionData, UrlItem, GenerateUrlMsg, ContextAdapter } from "definitions";
-import { MESSAGE_GOTO, MESSAGE_COPY_LINK, MESSAGE_GENERATE, MESSAGE_ADDCSS } from "../const";
+import { MESSAGE_GOTO, MESSAGE_COPY_LINK, MESSAGE_GENERATE, MESSAGE_ADDCSS, MESSAGE_OPEN_EDIT } from '../const';
 import TabManager from "./tabManager";
 import ContextManager from "./contextManager";
 
@@ -30,7 +30,8 @@ export class Extension {
             gotoLink: (data) => this.gotoLink(data),
             copyLink: (data) => this.copyLink(data),
             generateLink: (data) => this.generateLink(data),
-            addCss:(data)=>this.addCss(data)
+            addCss:(data)=>this.addCss(data),
+            openEdit:()=>this.openEdit()
         }
     }
 
@@ -69,5 +70,9 @@ export class Extension {
 
     private addCss(data:string){
         this.tab.sendMessageToContent({type:MESSAGE_ADDCSS,data})
+    }
+    
+    private openEdit(){
+        this.tab.sendMessageToContent({type:MESSAGE_OPEN_EDIT})
     }
 }

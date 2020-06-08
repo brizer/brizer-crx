@@ -28,6 +28,9 @@ const Style = (props:StyleProps) => {
     const cssStr = strategy[type].rm;
     actions.addCss(cssStr);
   }
+  function edit(){
+    actions.openEdit();
+  }
   return (
     <div>
       <Button onClick={() => add("outline")} type="primary">
@@ -35,6 +38,9 @@ const Style = (props:StyleProps) => {
       </Button>
       <Button onClick={() => rm("outline")} type="primary">
         删除outline
+      </Button>
+      <Button onClick={() => edit()} type="primary">
+        开启编辑
       </Button>
     </div>
   );

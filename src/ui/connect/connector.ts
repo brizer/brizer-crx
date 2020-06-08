@@ -1,4 +1,4 @@
-import { UI_NAME, MESSAGE_CHANGE_SETTINGS, MESSAGE_GET_DATA, MESSAGE_GOTO, MESSAGE_COPY_LINK, MESSAGE_GENERATE, MESSAGE_ADDCSS } from "../../const";
+import { UI_NAME, MESSAGE_CHANGE_SETTINGS, MESSAGE_GET_DATA, MESSAGE_GOTO, MESSAGE_COPY_LINK, MESSAGE_GENERATE, MESSAGE_ADDCSS, MESSAGE_OPEN_EDIT } from '../../const';
 import { UserSettings, ExtensionData, Message, UrlItem, GenerateUrlMsg } from "definitions";
 
 export default class Connector {
@@ -49,6 +49,11 @@ export default class Connector {
 
     public addCss(data:string){
         this.port.postMessage({type:MESSAGE_ADDCSS,data:data})
+    }
+
+        
+    private openEdit(){
+        this.port.postMessage({type:MESSAGE_OPEN_EDIT})
     }
 
 
