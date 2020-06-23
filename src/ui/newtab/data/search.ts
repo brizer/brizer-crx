@@ -12,7 +12,7 @@ export interface ISearch {
 type ISearchList = ISearch[];
 
 let usedList: any = [];
-let limitPage = 10;
+let limitPage = 30;
 const showTopNumber = 200;
 let curPage: number = 1;
 function showList() {
@@ -62,7 +62,7 @@ async function getInfo(url: string) {
   console.log(`fetching ${url}`);
   let homePageContent;
   try {
-    homePageContent = await axios(url, { timeout: 10000 });
+    homePageContent = await axios(url, { timeout: 100000 });
   } catch (error) {
     console.log(`error in fetching`);
     console.error(error);
