@@ -52,7 +52,7 @@ function generateAwesomeUrl() {
     if (result && result.length > 1) {
         txt = `- [${result[2]}](${url}) - `
     }
-    const desNode = document.querySelector('.text-gray-dark.mr-2');
+    const desNode = document.querySelector('.f4.mt-3');
     if (desNode && desNode.innerHTML) {
         txt += desNode.innerHTML.trim()
     }
