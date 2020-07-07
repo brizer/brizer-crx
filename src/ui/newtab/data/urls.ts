@@ -59,6 +59,10 @@ const urls: IUrlsGroup = {
       name: '@tomato-js'
     },
     {
+      url: 'https://github.com/tomato-js/tomato-node',
+      name: '@tomato-node'
+    },
+    {
       url: 'https://github.com/tomato-js/examples',
       name: '@tomato-js/examples'
     },
