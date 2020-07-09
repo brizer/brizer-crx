@@ -5,9 +5,9 @@ export const switchCards = [
     myNumber: 355
   },
   {
-    id: "594655683834",
-    name: "任天堂大乱斗",
-    myNumber:310
+    id: "595555681289",
+    name: "上古卷轴5",
+    myNumber:235
   },
   {
     id: "594311937105",
@@ -42,11 +42,6 @@ export const switchCards = [
   {
     id: "613262463584",
     name: "暗黑血统创世纪",
-    myNumber:0
-  },
-  {
-    id: "595555681289",
-    name: "上古卷轴5",
     myNumber:0
   },
   {
