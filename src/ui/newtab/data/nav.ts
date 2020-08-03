@@ -27,6 +27,10 @@ const navs:INavs = {
     nav5:{
         title:'数据对比',
         route:'/comparsion'
+    },
+    nav6:{
+        title:'时间轴',
+        route:'/times'
     }
 }
 

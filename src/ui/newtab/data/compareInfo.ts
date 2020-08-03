@@ -8,7 +8,6 @@ function getValueFromTaobao(html: string) {
   return number;
 }
 function getValueFromTmail(html: string) {
-  debugger;
   const regex = /\"defaultItemPrice\"\:\"(.*)\"\,\"globalSellItem/;
   const res = html.match(regex);
   const number = res[1] || "未找到对比值";

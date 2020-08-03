@@ -5,7 +5,7 @@ export function initBrizerHubUI() {
 
 function realInitBrizerHubUI() {
     let listUIDom = document.querySelector(".org-repos.repo-list");
-    let liList = listUIDom.querySelectorAll("li");
+    let liList = listUIDom.querySelectorAll(".public.fork.d-block.py-4.border-bottom");
     liList.forEach(v => {
       if (v.outerHTML.includes(`Forked from`) && !v.outerHTML.includes('brizer-li')) {
         let nameDom = v.querySelector(".d-inline-block");
