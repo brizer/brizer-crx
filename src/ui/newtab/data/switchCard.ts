@@ -5,19 +5,14 @@ export const switchCards = [
     myNumber: 355
   },
   {
-    id: "595555681289",
-    name: "上古卷轴5",
-    myNumber:235
-  },
-  {
-    id: "594311937105",
-    name: "暗黑破坏神3（标准版）",
-    myNumber:210
-  },
-  {
     id: "596296784247",
     name: "勇者斗恶龙建造2",
-    myNumber:0
+    myNumber:275
+  },
+  {
+    id: "605309819926",
+    name: "勇者斗恶龙11s",
+    myNumber:270
   },
   {
     id: "594483406195",
@@ -42,11 +37,6 @@ export const switchCards = [
   {
     id: "613262463584",
     name: "暗黑血统创世纪",
-    myNumber:0
-  },
-  {
-    id: "605309819926",
-    name: "勇者斗恶龙11s",
     myNumber:0
   }
 ];

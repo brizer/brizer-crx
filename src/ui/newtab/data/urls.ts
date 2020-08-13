@@ -71,7 +71,7 @@ const urls: IUrlsGroup = {
       name: 'source-reader'
     },
     {
-      url: 'https://omnipotent-front-end.github.io/-Design-Patterns-Typescript/index.html#/',
+      url: 'https://omnipotent-front-end.github.io/-Design-Patterns-Typescript/#/',
       name: '-Design-Patterns-Typescript'
     }
   ]
