@@ -31,6 +31,10 @@ const navs:INavs = {
     nav6:{
         title:'时间轴',
         route:'/times'
+    },
+    nav7:{
+        title:'工作',
+        route:'/jobs'
     }
 }
 

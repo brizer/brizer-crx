@@ -36,6 +36,14 @@
         "GET /api/rss/openingsource.json":
         {
             "path": "/api/rss/openingsource.xml"
+        },
+        "GET /api/rss/jobs.json":
+        {
+            "path": "/api/rss/jobs.xml"
+        },
+        "GET /api/rss/niukejobs.json":
+        {
+            "path": "/api/rss/niukejobs.xml"
         }
     }
 }

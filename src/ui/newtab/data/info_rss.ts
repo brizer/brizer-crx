@@ -35,7 +35,7 @@ const rssInfoConfig: InfoConfigList = [
       const { items } = data;
       console.error(data);
       const list:InfoList =  [];
-      items.map(item=>{
+      items.map((item,index)=>{
           list.push({
             name:item.title,
             link:item.link,

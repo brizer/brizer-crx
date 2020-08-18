@@ -12,6 +12,7 @@ import Url from "./Url";
 import Banner from "../components/Banner";
 import Editor from "./Editor";
 import Comparsion from "./Comparsion";
+import Jobs from "./Jobs";
 import Times from "./Times";
 
 interface AppProps {
@@ -54,7 +55,7 @@ const App: FunctionComponent<any> = (props: AppProps) => {
             ))}
           </Menu>
         </Sider>
-        <Layout style={isCollapsed?{ marginLeft: 50 }:{marginLeft:200}}>
+        <Layout style={isCollapsed ? { marginLeft: 50 } : { marginLeft: 200 }}>
           <Header className={styles.header}>
             <Banner />
           </Header>
@@ -70,11 +71,8 @@ const App: FunctionComponent<any> = (props: AppProps) => {
                 path="/comparsion"
                 component={() => <Comparsion />}
               />
-              <Route
-                exact
-                path="/times"
-                component={() => <Times />}
-              />
+              <Route exact path="/times" component={() => <Times />} />
+              <Route exact path="/jobs" component={() => <Jobs />} />
             </div>
           </Content>
           <Footer className={styles.ftc}>Brizer's chrome extension.</Footer>

@@ -25,44 +25,115 @@ const infoConfig: InfoConfigList = [
   },
   {
     enable: true,
-    fetch: "https://web-api.juejin.im/query",
+    fetch: "https://e.xitu.io/resources/gold",
     fetchObj: {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-Agent": "Juejin/Web"
       },
-      body: JSON.stringify({
-        operationName: "",
-        query: "",
-        variables: {
-          tags: [],
-          category: "5562b415e4b00c57d9b94ac8",
-          first: 20,
-          after: "",
-          order: "POPULAR"
-        },
-        extensions: { query: { id: "653b587c5c7c8a00ddf67fc66f989d42" } }
-      })
+      body: JSON.stringify({"category":"frontend","order":"heat","offset":0,"limit":80})
     },
     title: "掘金",
     cb: async function(data) {
       data = await data.json();
       const {
-        data: {
-          articleFeed: {
-            items: { edges }
-          }
-        }
+        data:infos
       } = data;
       const list: InfoList = [];
-      edges.map(
+      infos.map(
         v =>
-          isMyKey(v.node.title) &&
+          isMyKey(v.title) &&
           list.push({
-            name: v.node.title,
-            link: v.node.originalUrl,
-            title: "掘金-前端"
+            name: v.title,
+            link: v.url,
+            title: "掘金"
+          })
+      );
+      return Promise.resolve(list);
+    }
+  },
+  {
+    enable: true,
+    fetch: "https://e.xitu.io/resources/cnblogs",
+    fetchObj: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({"offset":0,"limit":80})
+    },
+    title: "博客园",
+    cb: async function(data) {
+      data = await data.json();
+      const {
+        data:infos
+      } = data;
+      const list: InfoList = [];
+      infos.map(
+        v =>
+          isMyKey(v.title) &&
+          list.push({
+            name: v.title,
+            link: v.url,
+            title: "博客园"
+          })
+      );
+      return Promise.resolve(list);
+    }
+  },
+  {
+    enable: true,
+    fetch: "https://e.xitu.io/resources/wanqu",
+    fetchObj: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({"offset":0,"limit":80})
+    },
+    title: "湾区日报",
+    cb: async function(data) {
+      data = await data.json();
+      const {
+        data:infos
+      } = data;
+      const list: InfoList = [];
+      infos.map(
+        v =>
+          isMyKey(v.title) &&
+          list.push({
+            name: v.title,
+            link: v.url,
+            title: "湾区日报"
+          })
+      );
+      return Promise.resolve(list);
+    }
+  },
+  {
+    enable: true,
+    fetch: "https://e.xitu.io/resources/ithome",
+    fetchObj: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({"offset":0,"limit":80})
+    },
+    title: "it之家",
+    cb: async function(data) {
+      data = await data.json();
+      const {
+        data:infos
+      } = data;
+      const list: InfoList = [];
+      infos.map(
+        v =>
+          isMyKey(v.title) &&
+          list.push({
+            name: v.title,
+            link: v.url,
+            title: "it之家"
           })
       );
       return Promise.resolve(list);
@@ -106,26 +177,6 @@ const infoConfig: InfoConfigList = [
         })
       })
       console.warn(infoObj);
-      return Promise.resolve(list);
-    }
-  },
-  {
-    enable: process.env.NODE_ENV === "production",
-    fetch:
-      "https://www.yuque.com/api/books/75258/docs?include_contributors=true&include_hits=true&limit=20&offset=0",
-    title: "egg团队专栏",
-    cb: async function(data: any) {
-      data = await data.json();
-      const list: InfoList = [];
-      data.data.map(
-        v =>
-          isMyKey(v.title) &&
-          list.push({
-            name: v.title,
-            link: `https://www.yuque.com/egg/nodejs/${v.slug}`,
-            title: "egg团队专栏"
-          })
-      );
       return Promise.resolve(list);
     }
   }

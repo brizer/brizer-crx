@@ -4,7 +4,7 @@ const timeList = [
     des: "放放出生",
   },
   {
-    date: "19930424",
+    date: "19930414",
     des: "雨晴出生",
   },
   {
@@ -22,6 +22,14 @@ const timeList = [
   {
     date: "20200801",
     des: "回武汉看主材",
+  },
+  {
+    date: "20200813",
+    des: "装修开工",
+  },
+  {
+    date: "20200816",
+    des: "放用上小米10",
   },
 ];
 export { timeList };

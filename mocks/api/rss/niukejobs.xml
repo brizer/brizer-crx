@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"
+
+>
+    <channel>
+        <title><![CDATA[社招广场 - 牛客网]]></title>
+        <link>https://www.nowcoder.com/job/center/</link>
+        <atom:link href="http://rsshub.app/nowcoder/jobcenter/2/%E6%AD%A6%E6%B1%89/5/1/false" rel="self" type="application/rss+xml" />
+        <description><![CDATA[社招广场 - 牛客网 - Made with love by RSSHub(https://github.com/DIYgod/RSSHub)]]></description>
+        <generator>RSSHub</generator>
+        <webMaster>i@diygod.me (DIYgod)</webMaster>
+        
+        
+        
+        <language>zh-cn</language>
+        
+        <lastBuildDate>Fri, 14 Aug 2020 08:08:15 GMT</lastBuildDate>
+        <ttl>60</ttl>
+        
+        <item>
+            <title><![CDATA[字节跳动 | 资深前端研发工程师 — PaaS 团队]]></title>
+            <description><![CDATA[<div class="rec-job-hd">
+<div class="rec-job-title clearfix">
+<h2><a href="javascript:void(0);" class="js-unfold">资深前端研发工程师 — PaaS 团队</a></h2>
+<div class="rec-job-oprt">
+<span class="oprt-item-share js-share" data-href="/fulltime/27401?jobIds=28264" style="position:relative;">
+<a href="javascript:void(0);" class="icon-share"></a>
+</span>
+<a href="javascript:void(0);" class="icon-exclamation-sign nc-req-auth js-nc-title-tips js-action-item" data-method="actionReport" data-id="28264" data-title="举报该职位"></a>
+</div>
+</div>
+<div class="rec-job-detail">
+<div>
+<span class="rec-job-item js-nc-title-tips" title="职位类别：前端"><i class="job-ico job-ico1"></i>前端</span>
+<span class="rec-job-item js-nc-title-tips" title="工作城市：武汉"><i class="job-ico job-ico2"></i>武汉</span>
+</div>
+<a href="javascript:void(0);" class="rec-fold-oprt down js-unfold">详情 <i class="icon-angle-down"></i></a>
+<a href="javascript:void(0);" class="rec-fold-oprt up js-fold">收起 <i class="icon-angle-up"></i></a>
+<p>薪酬：40K-70K  |  学历要求：本科及以上  |  工作年限：3年以上</p>
+</div>
+</div>
+<div class="rec-job-bd">
+<dl class="job-duty">
+<dt>岗位职责</dt>
+<div class="nc-post-content js-duty-content">1、熟悉 PaaS 业务需求，攻克技术难题，改进前端架构设计；
+2、持续改进前端工程化体系，推动前端的自动化、工具化；
+3、构建和完善企业级前端运行态框架和组件库，协助建立团队技术发展路线图；
+4、优秀的技术敏锐性，紧跟技术发展，并将技术成果应用于团队；
+5、营造良好的前端技术氛围，促进团队成长。</div>
+</dl>
+<dl>
+<dt>岗位要求</dt>
+<div class="nc-post-content js-duty-content">1、本科及以上学历，计算机相关专业，3年以上的 Web 前端开发经验；
+2、热爱前端开发，具备良好的团队协作精神和高度的责任心；
+3、有良好的编码习惯和快速学习能力，能够深入技术研究，追求极致；
+4、有前端性能优化、组件化和模块化方面的实践经验，有前端架构设计能力；
+5、熟悉前端工程化工具，如Yarn、Webpack、Rollup；
+6、有 SaaS、PaaS 开发经验，有后端开发语言经验者更佳。</div>
+</dl>
+<div class="rec-btn-wrap">
+<a href="javascript:void(0);" class="btn btn-primary nc-req-auth">申请</a>
+</div>
+</div>
+]]></description>
+            <pubDate>Wed, 12 Aug 2020 08:08:13 GMT</pubDate>
+            <guid isPermaLink="false">https://www.nowcoder.com/fulltime/27401?jobIds=28264&#38;ncsr=</guid>
+            <link>https://www.nowcoder.com/fulltime/27401?jobIds=28264&#38;ncsr=</link>
+            
+            
+            
+            
+            
+                
+            
+            
+        </item>
+        
+        <item>
+            <title><![CDATA[字节跳动 | 前端研发工程师 — aPaaS 团队]]></title>
+            <description><![CDATA[<div class="rec-job-hd">
+<div class="rec-job-title clearfix">
+<h2><a href="javascript:void(0);" class="js-unfold">前端研发工程师 — aPaaS 团队</a></h2>
+<div class="rec-job-oprt">
+<span class="oprt-item-share js-share" data-href="/fulltime/27401?jobIds=28262" style="position:relative;">
+<a href="javascript:void(0);" class="icon-share"></a>
+</span>
+<a href="javascript:void(0);" class="icon-exclamation-sign nc-req-auth js-nc-title-tips js-action-item" data-method="actionReport" data-id="28262" data-title="举报该职位"></a>
+</div>
+</div>
+<div class="rec-job-detail">
+<div>
+<span class="rec-job-item js-nc-title-tips" title="职位类别：前端"><i class="job-ico job-ico1"></i>前端</span>
+<span class="rec-job-item js-nc-title-tips" title="工作城市：武汉"><i class="job-ico job-ico2"></i>武汉</span>
+</div>
+<a href="javascript:void(0);" class="rec-fold-oprt down js-unfold">详情 <i class="icon-angle-down"></i></a>
+<a href="javascript:void(0);" class="rec-fold-oprt up js-fold">收起 <i class="icon-angle-up"></i></a>
+<p>薪酬：30K-60K  |  学历要求：本科及以上  |  工作年限：1年以上</p>
+</div>
+</div>
+<div class="rec-job-bd">
+<dl class="job-duty">
+<dt>岗位职责</dt>
+<div class="nc-post-content js-duty-content">1、根据业务需求，封装复用性高、可维护性好的前端组件；
+2、不断优化团队前后端分离架构，提高团队开发效率和质量；
+3、通过开发工具、改进流程，保证前端业务开发的高效性；
+4、通过编写单元测试、e2e testing，保证代码质量；
+5、关注前端技术前沿，及时把新技术转化为业务开发中的生产力。</div>
+</dl>
+<dl>
+<dt>岗位要求</dt>
+<div class="nc-post-content js-duty-content">1、本科及以上学历，计算机相关专业，1-3年 Web 前端开发经验；
+2、热爱前端开发，具备良好的团队协作精神和高度的责任心；
+3、有良好的编码习惯和快速学习能力，能够深入技术研究，追求极致；
+4、前端基础扎实，精通JavaScript编程，熟悉前端性能优化；
+5、有良好的面向对象开发思想，至少深入掌握一个主流库或框架，如：React、Vue 或 Augular；
+6、熟悉 B/S 架构，有 Node 经验，有 Python 等其他脚本语言经验更佳。</div>
+</dl>
+<div class="rec-btn-wrap">
+<a href="javascript:void(0);" class="btn btn-primary nc-req-auth">申请</a>
+</div>
+</div>
+]]></description>
+            <pubDate>Wed, 12 Aug 2020 08:08:13 GMT</pubDate>
+            <guid isPermaLink="false">https://www.nowcoder.com/fulltime/27401?jobIds=28262&#38;ncsr=</guid>
+            <link>https://www.nowcoder.com/fulltime/27401?jobIds=28262&#38;ncsr=</link>
+            
+            
+            
+            
+            
+                
+            
+            
+        </item>
+        
+        <item>
+            <title><![CDATA[字节跳动 | 前端研发工程师-内推专用]]></title>
+            <description><![CDATA[<div class="rec-job-hd">
+<div class="rec-job-title clearfix">
+<h2><a href="javascript:void(0);" class="js-unfold">前端研发工程师-内推专用</a></h2>
+<div class="rec-job-oprt">
+<span class="oprt-item-share js-share" data-href="/fulltime/22879?jobIds=28398" style="position:relative;">
+<a href="javascript:void(0);" class="icon-share"></a>
+</span>
+<a href="javascript:void(0);" class="icon-exclamation-sign nc-req-auth js-nc-title-tips js-action-item" data-method="actionReport" data-id="28398" data-title="举报该职位"></a>
+</div>
+</div>
+<div class="rec-job-detail">
+<div>
+<span class="rec-job-item js-nc-title-tips" title="职位类别：前端"><i class="job-ico job-ico1"></i>前端</span>
+<span class="rec-job-item js-nc-title-tips" title="工作城市：北京,上海,广州,深圳,杭州,南京,成都,厦门,武汉,西安,长沙,哈尔滨,合肥,长春,其他"><i class="job-ico job-ico2"></i>北京,上海,广州,深圳,杭州,南京,成都,厦门,武汉,西安,长沙,哈尔滨,合肥,长春,其他</span>
+</div>
+<a href="javascript:void(0);" class="rec-fold-oprt down js-unfold">详情 <i class="icon-angle-down"></i></a>
+<a href="javascript:void(0);" class="rec-fold-oprt up js-fold">收起 <i class="icon-angle-up"></i></a>
+<p>薪酬：薪资面议  |  学历要求：本科及以上  |  工作年限：0年以上</p>
+</div>
+</div>
+<div class="rec-job-bd">
+<dl class="job-duty">
+<dt>岗位职责</dt>
+<div class="nc-post-content js-duty-content">1、负责前端技术选型和开发工作；
+2、优化前端功能设计，解决各种浏览器和终端设备的兼容性问题；
+3、通过技术手段，提升用户体验并满足高性能要求；
+4、通用组件、类库编写，提升开发效率和质量。</div>
+</dl>
+<dl>
+<dt>岗位要求</dt>
+<div class="nc-post-content js-duty-content">1、本科及以上学历，计算机相关专业；
+2、精通HTML、CSS、JS，熟悉页面架构和布局，熟悉HTML5/CSS3等常用技术；
+3、熟悉常用UI框架（如bootstrap/pure/kendo等);
+4、精通JavaScript、AJAX、DOM、jQuery等技术；
+5、熟悉NodeJS，熟练使用Grunt、Gulp、Webpack等构建工具；
+6、具备MVVM框架开发经验，如React、VueJS、AngularJS等；
+7、良好的沟通和团队协作能力、热爱技术、责任心强、能推动技术框架的落地使用。</div>
+</dl>
+<div class="rec-btn-wrap">
+<a href="javascript:void(0);" class="btn btn-primary nc-req-auth">申请</a>
+</div>
+</div>
+]]></description>
+            <pubDate>Wed, 12 Aug 2020 08:05:33 GMT</pubDate>
+            <guid isPermaLink="false">https://www.nowcoder.com/fulltime/22879?jobIds=28398&#38;ncsr=</guid>
+            <link>https://www.nowcoder.com/fulltime/22879?jobIds=28398&#38;ncsr=</link>
+            
+            
+            
+            
+            
+                
+            
+            
+        </item>
+        
+        <item>
+            <title><![CDATA[字节跳动 | 前端研发工程师]]></title>
+            <description><![CDATA[<div class="rec-job-hd">
+<div class="rec-job-title clearfix">
+<h2><a href="javascript:void(0);" class="js-unfold">前端研发工程师</a></h2>
+<div class="rec-job-oprt">
+<span class="oprt-item-share js-share" data-href="/fulltime/25133?jobIds=26989" style="position:relative;">
+<a href="javascript:void(0);" class="icon-share"></a>
+</span>
+<a href="javascript:void(0);" class="icon-exclamation-sign nc-req-auth js-nc-title-tips js-action-item" data-method="actionReport" data-id="26989" data-title="举报该职位"></a>
+</div>
+</div>
+<div class="rec-job-detail">
+<div>
+<span class="rec-job-item js-nc-title-tips" title="职位类别：前端"><i class="job-ico job-ico1"></i>前端</span>
+<span class="rec-job-item js-nc-title-tips" title="工作城市：北京,上海,广州,深圳,杭州,南京,成都,厦门,武汉,西安,长沙,哈尔滨,合肥,长春,其他"><i class="job-ico job-ico2"></i>北京,上海,广州,深圳,杭州,南京,成都,厦门,武汉,西安,长沙,哈尔滨,合肥,长春,其他</span>
+</div>
+<a href="javascript:void(0);" class="rec-fold-oprt down js-unfold">详情 <i class="icon-angle-down"></i></a>
+<a href="javascript:void(0);" class="rec-fold-oprt up js-fold">收起 <i class="icon-angle-up"></i></a>
+<p>薪酬：薪资面议  |  学历要求：本科及以上  |  工作年限：0年以上</p>
+</div>
+</div>
+<div class="rec-job-bd">
+<dl class="job-duty">
+<dt>岗位职责</dt>
+<div class="nc-post-content js-duty-content">1、参与字节跳动大数据基础设施以及相关可视化产品的建设，为今日头条、抖音、火山、西瓜、悟空问答等旗下产品提供稳定高质量的数据服务；
+2、持续的性能优化和架构升级，不断提升团队效率和产品的用户体验；
+3、结合业务和数据场景，提出专业合理的可视化方案建议，并推动可视化技术产生更多的业务价值；
+4、提供全栈场景，不设边界。</div>
+</dl>
+<dl>
+<dt>岗位要求</dt>
+<div class="nc-post-content js-duty-content">1、对技术充满好奇心，乐于学习，愿意分享；具备良好的服务意识，责任心，团队沟通和协作能力、发现并解决问题的能力；
+2、有扎实的前端技术和计算机基础，包括但不限于 HTML / CSS / JavaScript / DOM / Http / 数据结构等；
+3、精通至少一门 MVVM 框架，如 AngularJS/Vue/React。使用 React 开发过大型项目或者复杂单页面应用者优先；
+4、熟练掌握 SVG / Canvas / WebGL 等前端绘图技术及标准，至少使用过一个数据可视化类库，包括但不限于 D3 / G2 / Three.js / ECharts / Highcharts。有一定计算机图形学基础的优先；
+5、掌握至少一***端编程语言，并有实战经验。熟悉 NodeJS / Python 者优先；
+6、有过大数据产品（Hadoop / Hive / Spark 等）相关开发经验者优先；
+7、有移动端开发经验并且有实际性能优化案例者优先；
+8、有自己的技术产品、开源作品或活跃的开源社区贡献者优先。</div>
+</dl>
+<div class="rec-btn-wrap">
+<a href="javascript:void(0);" class="btn btn-primary nc-req-auth">申请</a>
+</div>
+</div>
+]]></description>
+            <pubDate>Mon, 10 Aug 2020 08:08:13 GMT</pubDate>
+            <guid isPermaLink="false">https://www.nowcoder.com/fulltime/25133?jobIds=26989&#38;ncsr=</guid>
+            <link>https://www.nowcoder.com/fulltime/25133?jobIds=26989&#38;ncsr=</link>
+            
+            
+            
+            
+            
+                
+            
+            
+        </item>
+        
+        <item>
+            <title><![CDATA[字节跳动 | 前端开发工程师DataAILab]]></title>
+            <description><![CDATA[<div class="rec-job-hd">
+<div class="rec-job-title clearfix">
+<h2><a href="javascript:void(0);" class="js-unfold">前端开发工程师DataAILab</a></h2>
+<div class="rec-job-oprt">
+<span class="oprt-item-share js-share" data-href="/fulltime/25304?jobIds=28406" style="position:relative;">
+<a href="javascript:void(0);" class="icon-share"></a>
+</span>
+<a href="javascript:void(0);" class="icon-exclamation-sign nc-req-auth js-nc-title-tips js-action-item" data-method="actionReport" data-id="28406" data-title="举报该职位"></a>
+</div>
+</div>
+<div class="rec-job-detail">
+<div>
+<span class="rec-job-item js-nc-title-tips" title="职位类别：前端"><i class="job-ico job-ico1"></i>前端</span>
+<span class="rec-job-item js-nc-title-tips" title="工作城市：北京,上海,广州,深圳,杭州,南京,成都,厦门,武汉,西安,长沙,哈尔滨,合肥,长春,其他"><i class="job-ico job-ico2"></i>北京,上海,广州,深圳,杭州,南京,成都,厦门,武汉,西安,长沙,哈尔滨,合肥,长春,其他</span>
+</div>
+<a href="javascript:void(0);" class="rec-fold-oprt down js-unfold">详情 <i class="icon-angle-down"></i></a>
+<a href="javascript:void(0);" class="rec-fold-oprt up js-fold">收起 <i class="icon-angle-up"></i></a>
+<p>薪酬：薪资面议  |  学历要求：本科及以上  |  工作年限：0年以上</p>
+</div>
+</div>
+<div class="rec-job-bd">
+<dl class="job-duty">
+<dt>岗位职责</dt>
+<div class="nc-post-content js-duty-content">团队介绍：字节跳动Data&AILab，负责公司海内外所有产品线的推荐、广告、系统架构、大数据和开放平台等核心技术。同时研究时下最前沿的人工智能技术，涵盖NLP、CV、Speech、音乐、机器学习等多个AI领域，用人工智能技术应对着强大用户流量带来的各色需求。
+
+1、负责前端技术选型和开发工作；
+2、优化前端功能设计，解决各种浏览器和终端设备的兼容性问题；
+3、通过技术手段，提升用户体验并满足高性能要求；
+4、通用组件、类库编写，提升开发效率和质量。</div>
+</dl>
+<dl>
+<dt>岗位要求</dt>
+<div class="nc-post-content js-duty-content">1、本科及以上学历，计算机相关专业；
+2、精通HTML、CSS、JS，熟悉页面架构和布局，熟悉HTML5/CSS3等常用技术；
+3、熟悉常用UI框架（如bootstrap/pure/kendo等);
+4、精通JavaScript、AJAX、DOM、jQuery等技术；
+5、熟悉NodeJS，熟练使用Grunt、Gulp、Webpack等构建工具；
+6、具备MVVM框架开发经验，如React、VueJS、AngularJS等；
+7、良好的沟通和团队协作能力、热爱技术、责任心强、能推动技术框架的落地使用。</div>
+</dl>
+<div class="rec-btn-wrap">
+<a href="javascript:void(0);" class="btn btn-primary nc-req-auth">申请</a>
+</div>
+</div>
+]]></description>
+            <pubDate>Sun, 09 Aug 2020 08:05:33 GMT</pubDate>
+            <guid isPermaLink="false">https://www.nowcoder.com/fulltime/25304?jobIds=28406&#38;ncsr=</guid>
+            <link>https://www.nowcoder.com/fulltime/25304?jobIds=28406&#38;ncsr=</link>
+            
+            
+            
+            
+            
+                
+            
+            
+        </item>
+        
+    </channel>
+</rss>

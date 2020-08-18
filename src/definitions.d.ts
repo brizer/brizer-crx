@@ -68,10 +68,21 @@ export interface IInfoConfig {
     html?: string;
   }
 
+  export interface IJobListItem {
+      title?:string;
+      link?:string;
+      description?:string;
+      pubDate?:string;
+      author?:string;
+      key?:string;
+  }
+
   export interface ICustomInfoListItem {
     html:string
   }
   
   export type InfoList = IInfoListItem[];
+  
+  export type JobList = IJobListItem[];
   
   export type InfoConfigList = IInfoConfig[];

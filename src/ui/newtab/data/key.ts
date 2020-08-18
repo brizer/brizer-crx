@@ -28,6 +28,10 @@ const keys: string[] = [
   "基础",
   "面试",
   "架构",
+  "小米",
+  "网易",
+  "华为",
+  "腾讯"
 ];
 
 export function isMyKey(str: string) {
