@@ -73,6 +73,10 @@ const urls: IUrlsGroup = {
     {
       url: 'https://omnipotent-front-end.github.io/-Design-Patterns-Typescript/#/',
       name: '-Design-Patterns-Typescript'
+    },
+    {
+      url: 'https://github.com/omnipotent-front-end/shares',
+      name: 'shares'
     }
   ]
 };
