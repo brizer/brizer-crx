@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta name="Content-Type" content="text/html;charset=utf-8" />
+<meta name="Referrer" content="unsafe-url" />
+<meta content="True" name="HandheldFriendly" />
+<meta name="theme-color" content="#333344" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="detectify-verification" content="d0264f228155c7a1f72c3d91c17ce8fb" />
+<meta name="p:domain_verify" content="b87e3b55b409494aab88c1610b05a5f0" />
+<meta name="alexaVerifyID" content="OFc8dmwZo7ttU4UCnDh1rKDtLlY" />
+<meta name="baidu-site-verification" content="D00WizvYyr" />
+<meta name="msvalidate.01" content="D9B08FEA08E3DA402BF07ABAB61D77DE" />
+<meta property="wb:webmaster" content="f2f4cb229bda06a4" />
+<meta name="google-site-verification" content="LM_cJR94XJIqcYJeOCscGVMWdaRUvmyz6cVOqkFplaU" />
+<title>V2EX › Node.js</title>
+<link rel="dns-prefetch" href="https://static.v2ex.com/" />
+<link rel="dns-prefetch" href="https://cdn.v2ex.com/" />
+<link rel="dns-prefetch" href="https://i.v2ex.co/" />
+<link rel="dns-prefetch" href="https://www.google-analytics.com/" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/basic.css?v=505513:1598440839:3.9.8.5" />
+<link rel="stylesheet" type="text/css" media="screen" href="/static/dist/combo.css?v=3fecd12a59d327872f455789fbb86ae3" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/desktop.css?v=3.9.8.5" />
+<script>
+        const SITE_NIGHT = 0;
+    </script>
+<link rel="stylesheet" href="/static/css/tomorrow.css?v=3c006808236080a5d98ba4e64b8f323f" type="text/css" />
+<link rel="icon" sizes="192x192" href="/static/img/v2ex_192.png" />
+<link rel="shortcut icon" href="/static/img/icon_rayps_64.png" type="image/png" />
+<link rel="manifest" href="/manifest.webmanifest" />
+<script>
+        const MOBILE = false;
+    </script>
+<script src="/static/dist/combo.js?v=9872b7d18bd226831bebcf746168800e" type="text/javascript" defer></script>
+<meta name="description" content="Node.js is a platform built on &lt;a href=&#34;http://code.google.com/p/v8/&#34; target=&#34;_blank&#34;&gt;Chrome&#39;s JavaScript runtime&lt;/a&gt; for easily building fast, scalable network applications." />
+<link rel="top" title="Back to Top" href="#" />
+<link rel="next" title="Next Page" href="/go/nodejs?p=2" />
+<script>
+        var nodeName = "nodejs";
+        
+        var memberId = 505513;
+        
+
+		document.addEventListener("DOMContentLoaded", function(event) {
+			protectTraffic();
+            $('#topic_content').autosize().blur();
+
+            $("#topic_content").keydown(function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.which === 13) {
+                    e.preventDefault();
+                    $("#topic_content").parent().submit();
+                }
+            });
+            $("#topic_title").keydown(function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.which === 13) {
+                    e.preventDefault();
+                    $("#topic_title").parent().submit();
+                }
+            });
+
+            $("#topic_title").on('input', function(e) {
+                saveTopicDraft(nodeName, memberId);
+            });
+            $("#topic_content").on('input', function(e) {
+                saveTopicDraft(nodeName, memberId);
+            });
+
+            
+            loadTopicDraft(nodeName, memberId);
+
+            blocked = [];
+            ignored_topics = [];
+            $("#TopicsNode").children('.cell').each( function(index) {
+                for (i in blocked) {
+                    if ($(this).hasClass('from_' + blocked[i])) {
+                        $(this).css('display', 'none');
+                    }
+                }
+                for (i in ignored_topics) {
+                    if ($(this).hasClass('t_' + ignored_topics[i])) {
+                        $(this).css('display', 'none');
+                    }
+                }
+            });
+
+            
+		});
+	</script>
+</head>
+<body>
+<div id="Top">
+<div class="content">
+<div class="site-nav">
+<a href="/" name="top" title="way to explore"><div id="Logo"></div></a>
+<div id="search-container">
+<input id="search" type="text" maxlength="128" autocomplete="off" tabindex="1">
+<div id="search-result" class="box"></div>
+</div>
+<div class="tools">
+<a href="/" class="top">首页</a>
+<a href="/member/funnyliu123213" class="top">funnyliu123213</a>
+<a href="/notes" class="top">记事本</a>
+<a href="/t" class="top">时间轴</a>
+<a href="/settings" class="top">设置</a>
+<a href="#;" onclick="if (confirm('确定要从 V2EX 登出？')) { location.href= '/signout?once=97363'; }" class="top">登出</a>
+</div>
+</div>
+</div>
+</div>
+<div id="Wrapper">
+<div class="content">
+<div id="Leftbar"></div>
+<div id="Rightbar">
+<div class="sep20"></div>
+<div class="box">
+<div class="cell">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top"><a href="/member/funnyliu123213"><img src="https://cdn.v2ex.com/gravatar/b8a9df09bb551340c76ab2a7b9cc9a00?s=48&d=retro" class="avatar" border="0" align="default" style="max-width: 48px; max-height: 48px;" alt="funnyliu123213" /></a></td>
+<td width="10" valign="top"></td>
+<td width="auto" align="left"><div class="fr"><a href="/settings/night/toggle?once=97363" class="light-toggle"><img src="/static/img/toggle-light.png" align="absmiddle" height="10" alt="Light" /></a></div><span class="bigger"><a href="/member/funnyliu123213">funnyliu123213</a></span>
+</td>
+</tr>
+</table>
+<div class="sep10"></div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="33%" align="center"><a href="/my/nodes" class="dark" style="display: block;"><span class="bigger">0</span><div class="sep3"></div><span class="fade">节点收藏</span></a></td>
+<td width="34%" style="border-left: 1px solid rgba(100, 100, 100, 0.4); border-right: 1px solid rgba(100, 100, 100, 0.4);" align="center"><a href="/my/topics" class="dark" style="display: block;"><span class="bigger">0</span><div class="sep3"></div><span class="fade">主题收藏</span></a></td>
+<td width="33%" align="center"><a href="/my/following" class="dark" style="display: block;"><span class="bigger">0</span><div class="sep3"></div><span class="fade">特别关注</span></a></td>
+</tr>
+</table>
+</div>
+<div class="cell" id="member-activity">
+<div class="member-activity-bar">
+<div class="member-activity-start" style="width: 5%;"></div>
+</div>
+</div>
+<div class="cell" style="padding: 8px; line-height: 100%;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="28"><a href="/new"><img src="/static/img/essentials/compose.png?v=b9e1f045f4ad639733bf9f6dbc62ed4c" width="28" border="0" style="vertical-align: bottom;" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle" align="left"><a href="/new">创作新主题</a></td>
+</tr>
+</table>
+</div>
+<div class="cell flex-one-row" style="padding: 7px 10px;">
+<a href="/notifications" class="fade">0 条未读提醒</a>
+<div id="money"><a href="/balance" class="balance_area" style="">0 <img src="/static/img/bronze@2x.png" height="16" alt="B" style="vertical-align: baseline;" border="0" /></a></div>
+</div>
+<div class="dock_area">
+<div class="inner"><span class="chevron">&nbsp;›&nbsp;</span> <a href="/balance">在你开始发帖之前，请先领取初始资本</a></div>
+</div>
+</div>
+<div class="sep20"></div>
+<div class="box">
+<div class="inner">
+
+</div>
+</div>
+<style type="text/css">
+
+.node_header {
+    background-color: #001D25;
+}
+
+
+
+.node_header_link:link, .node_header_link:visited, .node_info a:link, .node_info a:visited {
+    color: #03C8FF;
+}
+
+
+
+.node_header_link:hover, .node_info a:hover {
+    color: #03C8FF;
+}
+
+.node_header_tab:hover {
+    color: #03C8FF !important;
+    border-bottom: 3px solid #03C8FF;
+}
+
+.node_header_tab_current:hover {
+    color: #03C8FF !important;
+    border-bottom: 3px solid #03C8FF;
+}
+
+</style>
+<div class="sep20"></div>
+<div class="box">
+<div class="inner">
+<strong class="gray">父节点</strong>
+<div class="sep10"></div>
+<node-sidebar nodeId=146 nodeName="js" nodeTitle="JavaScript" nodeAvatar="https://cdn.v2ex.com/navatar/a5e0/0132/146_normal.png?m=1594135486"></node-sidebar>
+</div>
+<div class="cell-top">
+<span class="f12 gray"><div class="fr">9</div>相关节点</span>
+</div>
+<div class="nodes-sidebar-container">
+<node-sidebar nodeId=881 nodeName="vue" nodeTitle="Vue.js" nodeAvatar="https://cdn.v2ex.com/navatar/7504/adad/881_normal.png?m=1579006017"></node-sidebar>
+<node-sidebar nodeId=837 nodeName="react" nodeTitle="React" nodeAvatar="https://cdn.v2ex.com/navatar/b0b1/83c2/837_normal.png?m=1579005994"></node-sidebar>
+<node-sidebar nodeId=425 nodeName="jquery" nodeTitle="jQuery" nodeAvatar="https://cdn.v2ex.com/navatar/25b2/822c/425_normal.png?m=1346453547"></node-sidebar>
+<node-sidebar nodeId=814 nodeName="angular" nodeTitle="Angular" nodeAvatar="https://cdn.v2ex.com/navatar/96b9/bff0/814_normal.png?m=1579006072"></node-sidebar>
+<node-sidebar nodeId=1047 nodeName="typescript" nodeTitle="TypeScript" nodeAvatar="https://cdn.v2ex.com/navatar/20b5/e1cf/1047_normal.png?m=1579032808"></node-sidebar>
+<div onclick="toggleMoreNodes(this, 'nodes-more-related', 4, `显示 4 个更多的相关节点`, `收起下面额外的节点`);" class="toggle-more-nodes"><i class="fa fa-caret-right"></i> &nbsp;<span>显示 4 个更多的相关节点</span></div>
+<div id="nodes-more-related" style="display: none;">
+<node-sidebar nodeId=988 nodeName="webpack" nodeTitle="webpack" nodeAvatar="https://cdn.v2ex.com/navatar/9908/279e/988_normal.png?m=1496642083"></node-sidebar>
+<node-sidebar nodeId=844 nodeName="ionic" nodeTitle="Ionic" nodeAvatar="https://cdn.v2ex.com/navatar/e97e/e205/844_normal.png?m=1579847461"></node-sidebar>
+<node-sidebar nodeId=475 nodeName="backbone" nodeTitle="Backbone.js" nodeAvatar="https://cdn.v2ex.com/navatar/5ef0/b4eb/475_normal.png?m=1356685695"></node-sidebar>
+<node-sidebar nodeId=778 nodeName="ace" nodeTitle="Ace" nodeAvatar="https://cdn.v2ex.com/navatar/e074/1335/778_normal.png?m=1394229267"></node-sidebar>
+</div>
+</div>
+</div>
+<div class="sep20"></div>
+<div class="box">
+<div style="width: 250px; height: 250px; box-sizing: content-box; background-color: transparent; overflow: hidden; cursor: pointer;" onclick="window.open('https://geekhub.com/?utm_source=v2ex&utm_medium=web&utm_campaign=202009-banner');">
+<svg style="margin: 6.8rem 4.3rem;">
+<text transform="translate(0 29)" fill="var(--box-foreground-color)" font-size="30" font-family="font-mono" font-weight="600">
+<tspan x="0" y="0">GeekHub</tspan>
+</text>
+</svg>
+</div>
+
+</div>
+<div class="sep20"></div>
+</div>
+<div id="Main">
+<div class="sep20"></div>
+<div class="box">
+<div class="node_header"><div class="node_avatar"><div style="float: left; display: inline-block; margin-right: 10px; margin-bottom: initial!important;"><img src="https://cdn.v2ex.com/navatar/2421/fcb1/436_large.png?m=1600003451" border="0" align="default" width="auto" alt="nodejs" /></div></div><div class="node_info"><div class="fr f12"><span>主题总数</span> <strong>2055</strong> <span class="snow">&nbsp;•&nbsp;</span> <a href="/favorite/node/436?once=97363" class="node_header_link">加入收藏</a></div><a href="/">V2EX</a> <span class="chevron">&nbsp;›&nbsp;</span> Node.js
+<div class="sep10"></div><div class="sep5"></div><div class="fr" style="padding-left: 10px;">
+<input type="button" class="super normal button" value="创建新主题" onclick="location.href = '/new/nodejs';" />
+</div>
+<span class="f12">Node.js is a platform built on <a href="http://code.google.com/p/v8/" target="_blank">Chrome's JavaScript runtime</a> for easily building fast, scalable network applications.</span>
+<div class="sep10"></div>
+<div class="node_header_tabs"><a href="/go/nodejs" class="node_header_tab_current">全部主题</a></div>
+</div>
+</div>
+<div class="cell" style="background-image: url('/static/img/shadow_light.png'); background-size: 20px 20px; background-repeat: repeat-x;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="92%" align="left"><a href="/go/nodejs?p=1" class="page_current">1</a> &nbsp;<a href="/go/nodejs?p=2" class="page_normal">2</a> &nbsp;<a href="/go/nodejs?p=3" class="page_normal">3</a> &nbsp;<a href="/go/nodejs?p=4" class="page_normal">4</a> &nbsp;<a href="/go/nodejs?p=5" class="page_normal">5</a> &nbsp;<a href="/go/nodejs?p=6" class="page_normal">6</a> &nbsp;<a href="/go/nodejs?p=7" class="page_normal">7</a> &nbsp;<a href="/go/nodejs?p=8" class="page_normal">8</a> &nbsp;<a href="/go/nodejs?p=9" class="page_normal">9</a> &nbsp;<a href="/go/nodejs?p=10" class="page_normal">10</a><span class="fade"> ... </span><a href="/go/nodejs?p=103" class="page_normal">103</a> &nbsp; <input type="number" class="page_input" autocomplete="off" value="1" min="1" max="103" onkeydown="if (event.keyCode == 13)
+                    location.href = '/go/nodejs?p=' + this.value" /></td>
+<td width="8%" align="right">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="50%" align="center" class="super normal button disable_now" style="border-right: none; border-top-right-radius: 0px; border-bottom-right-radius: 0px;">❮</td>
+<td width="50%" align="center" class="super normal_page_right button" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" onclick="location.href='/go/nodejs?p=2';" onmouseover="$(this).addClass('hover_now');" onmousedown="$(this).addClass('active_now');" onmouseleave="$(this).removeClass('hover_now'); $(this).removeClass('active_now');" title="下一页">❯</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id="TopicsNode">
+<div class="cell from_489932 t_710751">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/hujun528"><img src="https://cdn.v2ex.com/avatar/503e/d72d/489932_normal.png?m=1593998355" class="avatar" border="0" align="default" alt="hujun528" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/710751#reply1" class="topic-link">分享一个自用的微服务框架</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/hujun528">hujun528</a></strong> &nbsp;•&nbsp; 1 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/Rorysky">Rorysky</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/710751#reply1" class="count_livid">1</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_500968 t_710320">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/genal"><img src="https://cdn.v2ex.com/avatar/0cf4/6868/500968_normal.png?m=1595850447" class="avatar" border="0" align="default" alt="genal" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/710320#reply56" class="topic-link">大家去康康我的聊天室！</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/genal">genal</a></strong> &nbsp;•&nbsp; 18 小时 10 分钟前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/genal">genal</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/710320#reply56" class="count_livid">56</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_52958 t_710205">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/whatsupbitch"><img src="https://cdn.v2ex.com/gravatar/a3703aa9cac3e64845b24df7a27e5f5b?s=48&d=retro" class="avatar" border="0" align="default" alt="whatsupbitch" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/710205#reply65" class="topic-link">Node.js 比如 Nest 有 django 这种简单易用的框架么</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/whatsupbitch">whatsupbitch</a></strong> &nbsp;•&nbsp; 1 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/alinwu05">alinwu05</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/710205#reply65" class="count_livid">65</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_361348 t_709358">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/TomVista"><img src="https://cdn.v2ex.com/gravatar/70fca85ee1d01e1d3b46ad99e7833bdf?s=48&d=retro" class="avatar" border="0" align="default" alt="TomVista" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/709358#reply0" class="topic-link">求助 http 编码 utf8，写入文件指定 utf8，生成 utf16le 文件</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/TomVista">TomVista</a></strong> &nbsp;•&nbsp; 5 天前</span>
+</td>
+<td width="70" align="right" valign="middle">
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_341487 t_702273">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/yukiball"><img src="https://cdn.v2ex.com/avatar/aed1/cf6b/341487_normal.png?m=1598840267" class="avatar" border="0" align="default" alt="yukiball" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/702273#reply47" class="topic-link">nodejs 为什么对关系型数据库支持不好？ nodejs 为什么不适合 CPU 密集型应用？</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/yukiball">yukiball</a></strong> &nbsp;•&nbsp; 3 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/zy445566">zy445566</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/702273#reply47" class="count_livid">47</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_84153 t_705637">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/cat"><img src="https://cdn.v2ex.com/avatar/eac6/547c/84153_normal.png?m=1417140800" class="avatar" border="0" align="default" alt="cat" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/705637#reply28" class="topic-link">不懂就问： node.js 做静态资源服务器如何？</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/cat">cat</a></strong> &nbsp;•&nbsp; 13 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/love">love</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/705637#reply28" class="count_livid">28</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_238652 t_703183">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/coderdusk"><img src="https://cdn.v2ex.com/avatar/02cc/d00a/238652_normal.png?m=1596265427" class="avatar" border="0" align="default" alt="coderdusk" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/703183#reply6" class="topic-link">请问 nodejs 有什么保姆级的框架吗</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/coderdusk">coderdusk</a></strong> &nbsp;•&nbsp; 3 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/linkdesu">linkdesu</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/703183#reply6" class="count_livid">6</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_499503 t_705257">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/Xbathy"><img src="https://cdn.v2ex.com/gravatar/eaabeedeca816334f602682fd1a38a2d?s=48&d=retro" class="avatar" border="0" align="default" alt="Xbathy" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/705257#reply7" class="topic-link">问题 node.js</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/Xbathy">Xbathy</a></strong> &nbsp;•&nbsp; 19 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/TomVista">TomVista</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/705257#reply7" class="count_livid">7</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_500968 t_704802">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/genal"><img src="https://cdn.v2ex.com/avatar/0cf4/6868/500968_normal.png?m=1595850447" class="avatar" border="0" align="default" alt="genal" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/704802#reply15" class="topic-link">nestjs+vue+ts 打造一个酷炫的星空聊天室</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/genal">genal</a></strong> &nbsp;•&nbsp; 16 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/genal">genal</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/704802#reply15" class="count_livid">15</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_370220 t_705067">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/zy445566"><img src="https://cdn.v2ex.com/avatar/7cd2/2c58/370220_normal.png?m=1575981411" class="avatar" border="0" align="default" alt="zy445566" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/705067#reply18" class="topic-link">如何更爽的在 JS 中使用多线程</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/zy445566">zy445566</a></strong> &nbsp;•&nbsp; 19 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/flowfire">flowfire</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/705067#reply18" class="count_livid">18</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_403626 t_704538">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/skylee03"><img src="https://cdn.v2ex.com/gravatar/6563066d6b1ac788fca3a8033c382c46?s=48&d=retro" class="avatar" border="0" align="default" alt="skylee03" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/704538#reply1" class="topic-link">Electron 中使用 webRequest.onBeforeRequest 重定向请求 URL 失败</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/skylee03">skylee03</a></strong> &nbsp;•&nbsp; 15 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/skylee03">skylee03</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/704538#reply1" class="count_livid">1</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_406135 t_703925">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/mebtte"><img src="https://cdn.v2ex.com/avatar/9059/792c/406135_normal.png?m=1588054600" class="avatar" border="0" align="default" alt="mebtte" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/703925#reply36" class="topic-link">纯 JSON API 的话 Node.js 有什么服务框架可以推荐?</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/mebtte">mebtte</a></strong> &nbsp;•&nbsp; 23 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/UniKylin">UniKylin</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/703925#reply36" class="count_livid">36</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_398209 t_703900">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/xiyuesaves"><img src="https://cdn.v2ex.com/gravatar/0a4d008c46ca264cbb8525d81e9a0851?s=48&d=retro" class="avatar" border="0" align="default" alt="xiyuesaves" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/703900#reply0" class="topic-link">请教各位大神一个关于 sharp .composite 的问题</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/xiyuesaves">xiyuesaves</a></strong> &nbsp;•&nbsp; 24 天前</span>
+</td>
+<td width="70" align="right" valign="middle">
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_365763 t_702910">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/putaozhenhaochi"><img src="https://cdn.v2ex.com/avatar/aa58/d4b1/365763_normal.png?m=1590405708" class="avatar" border="0" align="default" alt="putaozhenhaochi" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/702910#reply2" class="topic-link">朴大的深入浅出啥时候出第二版啊</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/putaozhenhaochi">putaozhenhaochi</a></strong> &nbsp;•&nbsp; 27 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/putaozhenhaochi">putaozhenhaochi</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/702910#reply2" class="count_livid">2</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_236095 t_702734">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/hanyu5166"><img src="https://cdn.v2ex.com/avatar/1ecf/54a6/236095_normal.png?m=1551269160" class="avatar" border="0" align="default" alt="hanyu5166" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/702734#reply5" class="topic-link">社交 App 中的每日任务 和 一次性任务 数据结构怎么设计和实现思路？</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/hanyu5166">hanyu5166</a></strong> &nbsp;•&nbsp; 27 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/siweipancc">siweipancc</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/702734#reply5" class="count_livid">5</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_280671 t_702377">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/number"><img src="https://cdn.v2ex.com/gravatar/3956f08045182ee8fa43ce162b07625e?s=48&d=retro" class="avatar" border="0" align="default" alt="number" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/702377#reply16" class="topic-link">你遇到过哪些业务场景，可以通过 node.js 实现，却是 CPU 密集型场景，并且可能需要实时返回的？</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/number">number</a></strong> &nbsp;•&nbsp; 29 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/foxkiller">foxkiller</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/702377#reply16" class="count_livid">16</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_127712 t_701357">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/way2explore2"><img src="https://cdn.v2ex.com/avatar/c553/80d6/127712_normal.png?m=1441087299" class="avatar" border="0" align="default" alt="way2explore2" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/701357#reply1" class="topic-link">PambdaJS 易用的 node 多进程工具</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/way2explore2">way2explore2</a></strong> &nbsp;•&nbsp; 21 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/way2explore2">way2explore2</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/701357#reply1" class="count_livid">1</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_289188 t_699362">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/meteor957"><img src="https://cdn.v2ex.com/gravatar/08634cd1764300f644222211b54567ef?s=48&d=retro" class="avatar" border="0" align="default" alt="meteor957" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/699362#reply11" class="topic-link">nodejs 天生异步 为什么还需要异步队列</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/meteor957">meteor957</a></strong> &nbsp;•&nbsp; 12 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/haijianyang">haijianyang</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/699362#reply11" class="count_livid">11</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_211854 t_699845">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/s609926202"><img src="https://cdn.v2ex.com/gravatar/d5d300571c756a007766196adc46fe79?s=48&d=retro" class="avatar" border="0" align="default" alt="s609926202" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/699845#reply11" class="topic-link">Nodejs 如何并发请求数据接口，并返回汇总后的结果？</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/s609926202">s609926202</a></strong> &nbsp;•&nbsp; 6 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/JaydenC">JaydenC</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/699845#reply11" class="count_livid">11</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell from_84153 t_700641">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="48" valign="top" align="center"><a href="/member/cat"><img src="https://cdn.v2ex.com/avatar/eac6/547c/84153_normal.png?m=1417140800" class="avatar" border="0" align="default" alt="cat" /></a></td>
+<td width="10"></td>
+<td width="auto" valign="middle"><span class="item_title"><a href="/t/700641#reply20" class="topic-link">萌新请教两个关于 🥚 egg.js 的问题</a></span>
+<div class="sep5"></div>
+<span class="topic_info"><strong><a href="/member/cat">cat</a></strong> &nbsp;•&nbsp; 34 天前 &nbsp;•&nbsp; 最后回复来自 <strong><a href="/member/cat">cat</a></strong></span>
+</td>
+<td width="70" align="right" valign="middle">
+<a href="/t/700641#reply20" class="count_livid">20</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="cell" style="background-image: url('/static/img/shadow_light.png'); background-size: 20px 20px; background-repeat: repeat-x;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="92%" align="left"><a href="/go/nodejs?p=1" class="page_current">1</a> &nbsp;<a href="/go/nodejs?p=2" class="page_normal">2</a> &nbsp;<a href="/go/nodejs?p=3" class="page_normal">3</a> &nbsp;<a href="/go/nodejs?p=4" class="page_normal">4</a> &nbsp;<a href="/go/nodejs?p=5" class="page_normal">5</a> &nbsp;<a href="/go/nodejs?p=6" class="page_normal">6</a> &nbsp;<a href="/go/nodejs?p=7" class="page_normal">7</a> &nbsp;<a href="/go/nodejs?p=8" class="page_normal">8</a> &nbsp;<a href="/go/nodejs?p=9" class="page_normal">9</a> &nbsp;<a href="/go/nodejs?p=10" class="page_normal">10</a><span class="fade"> ... </span><a href="/go/nodejs?p=103" class="page_normal">103</a> &nbsp; <input type="number" class="page_input" autocomplete="off" value="1" min="1" max="103" onkeydown="if (event.keyCode == 13)
+                    location.href = '/go/nodejs?p=' + this.value" /></td>
+<td width="8%" align="right">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="50%" align="center" class="super normal button disable_now" style="border-right: none; border-top-right-radius: 0px; border-bottom-right-radius: 0px;">❮</td>
+<td width="50%" align="center" class="super normal_page_right button" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" onclick="location.href='/go/nodejs?p=2';" onmouseover="$(this).addClass('hover_now');" onmousedown="$(this).addClass('active_now');" onmouseleave="$(this).removeClass('hover_now'); $(this).removeClass('active_now');" title="下一页">❯</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="cell flex-one-row"><span class="gray">第 1 到 20 / 共 2055 个主题</span><div>2522 人收藏了这个节点</div></div>
+</div>
+<div class="sep20"></div>
+<div class="box">
+<div class="cell">
+<form action="/new/nodejs" method="post">
+<input type="text" name="title" value="" class="sll" id="topic_title" placeholder="请输入主题标题，如果标题能够表达完整内容，则正文可以为空" />
+<div class="sep10"></div>
+<textarea name="content" class="mll" id="topic_content" placeholder="正文"></textarea>
+<div class="sep10"></div>
+<input type="hidden" value="97363" name="once" />
+<input type="submit" value="创建新主题" class="super normal button" />
+</form>
+</div>
+<div class="inner"><div class="fr"><a href="/settings/ignore/node/436?once=97363">忽略这个节点</a>
+&nbsp; <span class="fade">被忽略的节点中的主题将不会在首页出现</span></div>
+&nbsp;
+</div>
+</div>
+</div>
+</div>
+<div class="c"></div>
+<div class="sep20"></div>
+</div>
+<div id="Bottom">
+<div class="content">
+<div class="inner">
+<div class="sep10"></div>
+<div class="fr">
+<a href="https://www.digitalocean.com/?refcode=1b51f1a7651d" target="_blank"><div id="DigitalOcean"></div></a>
+</div>
+<strong><a href="/about" class="dark" target="_self">关于</a> &nbsp; <span class="snow">·</span> &nbsp; <a href="/faq" class="dark" target="_self">FAQ</a> &nbsp; <span class="snow">·</span> &nbsp; <a href="/p/7v9TEc53" class="dark" target="_self">API</a> &nbsp; <span class="snow">·</span> &nbsp; <a href="/mission" class="dark" target="_self">我们的愿景</a> &nbsp; <span class="snow">·</span> &nbsp; <a href="/advertise" class="dark" target="_self">广告投放</a> &nbsp; <span class="snow">·</span> &nbsp; <a href="/advertise/2019.html" class="dark" target="_self">感谢</a> &nbsp; <span class="snow">·</span> &nbsp; <a href="/tools" class="dark" target="_self">实用小工具</a> &nbsp; <span class="snow">·</span> &nbsp; 4659 人在线</strong> &nbsp; <span class="fade">最高记录 5168</span> &nbsp; <span class="snow">·</span> &nbsp; <a href="/select/language" class="f11"><img src="/static/img/language.png?v=6a5cfa731dc71a3769f6daace6784739" width="16" align="absmiddle" id="ico-select-language" /> &nbsp; Select Language</a>
+<div class="sep20"></div>
+创意工作者们的社区
+<div class="sep5"></div>
+World is powered by solitude
+<div class="sep20"></div>
+<span class="small fade">VERSION: 3.9.8.5 · 18ms · UTC 02:14 · PVG 10:14 · LAX 19:14 · JFK 22:14<br />♥ Do have faith in what you're doing.</span>
+<div class="sep10"></div>
+</div>
+</div>
+</div>
+<script src="/b/i/cM_b31faMj1veAf1cBsearOwmZBGnXobcWH5GlV3r8O6IttOlM4xVFuABieLQKvtXYnZQQtNJ-WcrUEwRdyNc4xrCYn4qoBViRTt2pHOI2DazbXcLjPPc8R3aiQYgdBgkyBsCju9joQ75lJhGdQZwZ2fe7f_1X2b8iCZWuKnT-g="></script>
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11940834-2', 'v2ex.com');
+	  ga('send', 'pageview');
+      
+ga('send', 'event', 'Node', 'list', 'nodejs');
+
+
+	</script>
+</body>
+</html>

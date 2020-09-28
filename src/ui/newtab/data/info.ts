@@ -1,5 +1,7 @@
 import { isMyKey } from "./key";
 import { InfoConfigList, InfoList } from "definitions";
+import { parseStr2Dom } from "../../../utils/dom";
+
 
 
 const infoConfig: InfoConfigList = [
@@ -20,6 +22,26 @@ const infoConfig: InfoConfigList = [
             title: "CNode社区"
           })
       );
+      return Promise.resolve(list);
+    }
+  },
+  {
+    enable: true,
+    fetch: process.env.NODE_ENV === "production"?"https://www.v2ex.com/go/nodejs":'/api/v2ex_node.html',
+    title: "v2exNode",
+    cb: async function(data: any) {
+      data = await data.text();
+      const dom = parseStr2Dom(data)
+      const links = dom.querySelectorAll('.topic-link');
+      const list: InfoList = [];
+      console.log(links);
+      links.forEach((v:any)=>{
+        list.push({
+          name:v.innerHTML,
+          link:`https://www.v2ex.com${v.attributes.href.value}`,
+          title:'v2exNode'
+        })
+      })
       return Promise.resolve(list);
     }
   },

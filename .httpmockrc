@@ -44,6 +44,10 @@
         "GET /api/rss/niukejobs.json":
         {
             "path": "/api/rss/niukejobs.xml"
+        },
+        "GET /api/v2ex_node.html":
+        {
+            "path": "/api/v2ex_node.html"
         }
     }
 }
