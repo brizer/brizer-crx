@@ -5,16 +5,6 @@ export const switchCards = [
     myNumber: 355
   },
   {
-    id: "596296784247",
-    name: "勇者斗恶龙建造2",
-    myNumber:275
-  },
-  {
-    id: "605309819926",
-    name: "勇者斗恶龙11s",
-    myNumber:270
-  },
-  {
     id: "594483406195",
     name: "异步神剑2",
     myNumber:0

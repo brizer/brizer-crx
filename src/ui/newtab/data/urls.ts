@@ -77,6 +77,10 @@ const urls: IUrlsGroup = {
     {
       url: 'https://github.com/omnipotent-front-end/shares',
       name: 'shares'
+    },
+    {
+      url: 'https://github.com/omnipotent-front-end/Foods',
+      name: 'health'
     }
   ]
 };
