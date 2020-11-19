@@ -7,7 +7,12 @@ export const switchCards = [
   {
     id: "594483406195",
     name: "异步神剑2",
-    myNumber:0
+    myNumber:390
+  },
+  {
+    id: "612458116512",
+    name: "双点医院",
+    myNumber:165
   },
   {
     id: "598550185165",
