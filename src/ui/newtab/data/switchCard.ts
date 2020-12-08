@@ -15,6 +15,11 @@ export const switchCards = [
     myNumber:165
   },
   {
+    id: "631926561601",
+    name: "塞尔达无双",
+    myNumber: 300
+  },
+  {
     id: "598550185165",
     name: "传送门骑士",
     myNumber:0
