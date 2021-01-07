@@ -5,18 +5,13 @@ export const switchCards = [
     myNumber: 355
   },
   {
-    id: "594483406195",
-    name: "异步神剑2",
-    myNumber:390
-  },
-  {
-    id: "612458116512",
-    name: "双点医院",
-    myNumber:165
-  },
-  {
     id: "631926561601",
     name: "塞尔达无双",
+    myNumber: 300
+  },
+  {
+    id: "633563294579",
+    name: "渡神纪",
     myNumber: 300
   },
   {
