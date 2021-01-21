@@ -45,6 +45,23 @@ const rssInfoConfig: InfoConfigList = [
       return Promise.resolve(list);
     }
    
+  },
+  {
+    enable:true,
+    fetch: "https://css-tricks.com/feed/",
+    title:' Css技巧',
+    cb: async function(data:any) {
+      const { items } = data;
+      const list:InfoList = [];
+      items.map((item, index)=>{
+        list.push({
+          name:item.title,
+          link:item.link,
+          title:'Css技巧'
+        })
+      })
+      return Promise.resolve(list);
+    }
   }
 ];
 export default rssInfoConfig;
