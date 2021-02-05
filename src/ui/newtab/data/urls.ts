@@ -81,6 +81,10 @@ const urls: IUrlsGroup = {
     {
       url: 'https://github.com/omnipotent-front-end/Foods',
       name: 'health'
+    },
+    {
+      url: 'https://github.com/brizer/lighthouse-apm',
+      name: 'lighthouse-apm'
     }
   ]
 };
