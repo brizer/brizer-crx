@@ -15,6 +15,16 @@ export const switchCards = [
     myNumber: 300
   },
   {
+    id: "631407873903",
+    name: "舞力全开2021",
+    myNumber: 270
+  },
+  {
+    id: "595733544777",
+    name: 'ARMS',
+    myNumber:285
+  },
+  {
     id: "598550185165",
     name: "传送门骑士",
     myNumber:0
