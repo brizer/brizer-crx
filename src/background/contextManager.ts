@@ -1,5 +1,5 @@
 import { ContextAdapter } from "definitions";
-import { CONTEXT_MEUNITEM_ID_OPEN, CONTEXT_MEUNITEM_ID_TRANSLATE, CONTEXT_MEUNITEM_ID_SEARCH_ZHIHU, CONTEXT_MEUNITEM_ID_SEARCH_JUEJIN, CONTEXT_MEUNITEM_ID_SEARCH_WIKI, CONTEXT_MEUNITEM_ID_SEARCH_GIT, CONTEXT_MEUNITEM_ID_SEARCH_NPM, CONTEXT_MEUNITEM_ID_SEARCH_MDN, CONTEXT_MEUNITEM_ID_READ_SOURCE, CONTEXT_MEUNITEM_ID_SEARCH_NPM_TREND } from '../const';
+import { CONTEXT_MEUNITEM_ID_OPEN, CONTEXT_MEUNITEM_ID_TRANSLATE, CONTEXT_MEUNITEM_ID_SEARCH_ZHIHU, CONTEXT_MEUNITEM_ID_SEARCH_JUEJIN, CONTEXT_MEUNITEM_ID_SEARCH_WIKI, CONTEXT_MEUNITEM_ID_SEARCH_GIT, CONTEXT_MEUNITEM_ID_SEARCH_NPM, CONTEXT_MEUNITEM_ID_SEARCH_MDN, CONTEXT_MEUNITEM_ID_READ_SOURCE, CONTEXT_MEUNITEM_ID_SEARCH_NPM_TREND, CONTEXT_MEUNITEM_ID_SEARCH_GIT_PRO } from '../const';
 
 export default class ContextManager {
     private adapter: ContextAdapter;
@@ -61,6 +61,11 @@ export default class ContextManager {
             title:'源码分析',
             contexts: ['selection']
         });
+        chrome.contextMenus.create({
+            id:CONTEXT_MEUNITEM_ID_SEARCH_GIT_PRO,
+            title:'github搜索最大化',
+            contexts: ['selection']
+        })
     }
 
     private listenClick(): void {
@@ -143,6 +148,14 @@ export default class ContextManager {
                         key: +new Date(),
                         str: info.pageUrl,
                         toStr: `https://github.com/FunnyLiu/${info.selectionText}/tree/readsource`
+                    })
+                    break;
+                }
+                case CONTEXT_MEUNITEM_ID_SEARCH_GIT_PRO: {
+                    this.adapter.open({
+                        key: +new Date(),
+                        str: info.pageUrl,
+                        toStr: `https://github.com/search?q=in%3Areadme+${info.selectionText}&type=Repositories`
                     })
                     break;
                 }
