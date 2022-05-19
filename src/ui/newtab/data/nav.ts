@@ -35,6 +35,10 @@ const navs:INavs = {
     nav7:{
         title:'工作',
         route:'/jobs'
+    },
+    nav8:{
+        title: '点评',
+        route: '/judge'
     }
 }
 

@@ -14,6 +14,7 @@ import Editor from "./Editor";
 import Comparsion from "./Comparsion";
 import Jobs from "./Jobs";
 import Times from "./Times";
+import Judge from "./Judge";
 
 interface AppProps {
   navs: INavs;
@@ -73,6 +74,7 @@ const App: FunctionComponent<any> = (props: AppProps) => {
               />
               <Route exact path="/times" component={() => <Times />} />
               <Route exact path="/jobs" component={() => <Jobs />} />
+              <Route exact path="/judge" component={() => <Judge />} />
             </div>
           </Content>
           <Footer className={styles.ftc}>Brizer's chrome extension.</Footer>
