@@ -34,6 +34,10 @@ const timeList = [
   {
     date: "20211001",
     des: "放和雨晴婚礼"
+  },
+  {
+    date: "20220425",
+    des: "放加入中国移动"
   }
 ];
 export { timeList };
