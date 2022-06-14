@@ -9,14 +9,6 @@ export interface IUrl {
 const urls: IUrlsGroup = {
   '日常': [
     {
-      url: "http://cloud-i.netease.com/vpn",
-      name: "网易vpn"
-    },
-    {
-      url: "http://cloud.netease.com/vpn",
-      name: "网易vpn2"
-    },
-    {
       url: "https://brizer.github.io/urls/zh/api.html",
       name: "awesome-url"
     },
@@ -27,6 +19,10 @@ const urls: IUrlsGroup = {
     {
       url: "https://omnipotent-front-end.github.io/",
       name: "基础知识库"
+    },
+    {
+      url: "https://omnipotent-front-end.github.io/best-code/",
+      name: "编码技巧库"
     },
     {
       url: "https://github.com/omnipotent-front-end/blog",
