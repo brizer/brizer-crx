@@ -11,6 +11,7 @@ export const MESSAGE_OPEN_EDIT= 'open-edit'
 export const GENERATE_TYPE_AWESOME = 'awesome'
 export const GENERATE_TYPE_REFERENCE = 'reference'
 export const GENERATE_TYPE_REFERENCE_RELATIVE = 'reference_relative'
+export const GENERATE_TYPE_RUNAPI = 'runapi'
 
 export const CONTEXT_MEUNITEM_ID_OPEN = 'open'
 export const CONTEXT_MEUNITEM_ID_TRANSLATE = 'translate'

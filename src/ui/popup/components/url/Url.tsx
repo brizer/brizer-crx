@@ -2,7 +2,7 @@ import React, { useState, useContext, useRef } from "react";
 import { Table, Form, Input, Button } from "antd";
 import styles from "./Url.less";
 import { UrlItem, ExtensionActions } from "definitions";
-import { GENERATE_TYPE_AWESOME, GENERATE_TYPE_REFERENCE, GENERATE_TYPE_REFERENCE_RELATIVE } from "../../../../const";
+import { GENERATE_TYPE_AWESOME, GENERATE_TYPE_REFERENCE, GENERATE_TYPE_REFERENCE_RELATIVE, GENERATE_TYPE_RUNAPI } from '../../../../const';
 
 const UrlContext = React.createContext(null);
 
@@ -204,6 +204,10 @@ const Url = props => {
     actions.generateUrl({type:GENERATE_TYPE_REFERENCE_RELATIVE})
   }
 
+  function generateRunApi(){
+    actions.generateUrl({type: GENERATE_TYPE_RUNAPI})
+  }
+
 
   return (
     <div>
@@ -218,6 +222,9 @@ const Url = props => {
       </Button>
       <Button  className={styles.btn} onClick={generateRelativeReferenceUrl} type="primary">
         相对引用
+      </Button>
+      <Button  className={styles.btn} onClick={generateRunApi} type="primary">
+        runapi
       </Button>
       <Table
         components={components}
