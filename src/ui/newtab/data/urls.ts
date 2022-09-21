@@ -31,6 +31,10 @@ const urls: IUrlsGroup = {
     {
       url: "https://blog.csdn.net/mevicky",
       name: "CSDN博客"
+    },
+    {
+      url: 'http://hao.shejidaren.com/index.html',
+      name: '产品设计导航大全'
     }
   ],
   '常用开源快速导航': [
@@ -41,14 +45,6 @@ const urls: IUrlsGroup = {
     {
       url: 'https://github.com/brizer/http-mocker',
       name: 'http-mocker'
-    },
-    {
-      url: 'https://github.com/Linjovi/yoso',
-      name: 'yoso'
-    },
-    {
-      url: 'https://github.com/WebRookieSyb/rollup-to-nej',
-      name: 'rollup-to-nej'
     },
     {
       url: 'https://github.com/tomato-js/tomato',
@@ -81,6 +77,10 @@ const urls: IUrlsGroup = {
     {
       url: 'https://github.com/brizer/lighthouse-apm',
       name: 'lighthouse-apm'
+    },
+    {
+      url: 'https://github.com/omnipotent-front-end/readList',
+      name: 'readList'
     }
   ]
 };
