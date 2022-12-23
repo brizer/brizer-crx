@@ -35,6 +35,10 @@ const urls: IUrlsGroup = {
     {
       url: 'http://hao.shejidaren.com/index.html',
       name: '产品设计导航大全'
+    },
+    {
+      url: 'https://chat.openai.com/chat',
+      name: 'AI小助手chatGPT'
     }
   ],
   '常用开源快速导航': [
