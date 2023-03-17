@@ -37,8 +37,16 @@ const urls: IUrlsGroup = {
       name: '产品设计导航大全'
     },
     {
+      url: 'https://17yongai.com/',
+      name: 'AI产品大全'
+    },
+    {
       url: 'https://chat.openai.com/chat',
       name: 'AI小助手chatGPT'
+    },
+    {
+      url: 'https://nihaojob.github.io/vue-fabric-editor/',
+      name: '在线制图'
     }
   ],
   '常用开源快速导航': [
