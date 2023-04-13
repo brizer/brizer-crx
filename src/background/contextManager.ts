@@ -1,5 +1,5 @@
 import { ContextAdapter } from "definitions";
-import { CONTEXT_MEUNITEM_ID_OPEN, CONTEXT_MEUNITEM_ID_TRANSLATE, CONTEXT_MEUNITEM_ID_SEARCH_ZHIHU, CONTEXT_MEUNITEM_ID_SEARCH_JUEJIN, CONTEXT_MEUNITEM_ID_SEARCH_WIKI, CONTEXT_MEUNITEM_ID_SEARCH_GIT, CONTEXT_MEUNITEM_ID_SEARCH_NPM, CONTEXT_MEUNITEM_ID_SEARCH_MDN, CONTEXT_MEUNITEM_ID_READ_SOURCE, CONTEXT_MEUNITEM_ID_SEARCH_NPM_TREND, CONTEXT_MEUNITEM_ID_SEARCH_GIT_PRO } from '../const';
+import { CONTEXT_MEUNITEM_ID_OPEN, CONTEXT_MEUNITEM_ID_TRANSLATE, CONTEXT_MEUNITEM_ID_SEARCH_ZHIHU, CONTEXT_MEUNITEM_ID_SEARCH_JUEJIN, CONTEXT_MEUNITEM_ID_SEARCH_WIKI, CONTEXT_MEUNITEM_ID_SEARCH_GIT, CONTEXT_MEUNITEM_ID_SEARCH_NPM, CONTEXT_MEUNITEM_ID_SEARCH_MDN, CONTEXT_MEUNITEM_ID_READ_SOURCE, CONTEXT_MEUNITEM_ID_SEARCH_NPM_TREND, CONTEXT_MEUNITEM_ID_SEARCH_GIT_PRO, CONTEXT_MEUNITEM_ID_GPT } from '../const';
 
 export default class ContextManager {
     private adapter: ContextAdapter;
@@ -66,6 +66,11 @@ export default class ContextManager {
             title:'github搜索最大化',
             contexts: ['selection']
         })
+        chrome.contextMenus.create({
+            id:CONTEXT_MEUNITEM_ID_GPT,
+            title: 'GPT搜索',
+            contexts: ['selection']
+        })
     }
 
     private listenClick(): void {
@@ -108,6 +113,14 @@ export default class ContextManager {
                         key: +new Date(),
                         str: info.pageUrl,
                         toStr: `https://zh.wikipedia.org/w/index.php?search=${info.selectionText}&title=Special:%E6%90%9C%E7%B4%A2&go=%E5%89%8D%E5%BE%80&ns0=1`
+                    })
+                    break;
+                }
+                case CONTEXT_MEUNITEM_ID_GPT: {
+                    this.adapter.open({
+                        key: +new Date(),
+                        str: info.pageUrl,
+                        toStr: `https://www.phind.com/search?q=${info.selectionText}。 请用中文回答`
                     })
                     break;
                 }
