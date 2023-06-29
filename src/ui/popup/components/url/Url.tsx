@@ -2,7 +2,7 @@ import React, { useState, useContext, useRef } from "react";
 import { Table, Form, Input, Button } from "antd";
 import styles from "./Url.less";
 import { UrlItem, ExtensionActions } from "definitions";
-import { GENERATE_TYPE_AWESOME, GENERATE_TYPE_REFERENCE, GENERATE_TYPE_REFERENCE_RELATIVE, GENERATE_TYPE_RUNAPI } from '../../../../const';
+import { GENERATE_TYPE_AWESOME, GENERATE_TYPE_REFERENCE, GENERATE_TYPE_REFERENCE_RELATIVE, GENERATE_TYPE_RUNAPI, GENERATE_TYPE_SUMMARY } from '../../../../const';
 
 const UrlContext = React.createContext(null);
 
@@ -208,6 +208,10 @@ const Url = props => {
     actions.generateUrl({type: GENERATE_TYPE_RUNAPI})
   }
 
+  function generateSummary(){
+    actions.generateUrl({type: GENERATE_TYPE_SUMMARY})
+  }
+
 
   return (
     <div>
@@ -225,6 +229,9 @@ const Url = props => {
       </Button>
       <Button  className={styles.btn} onClick={generateRunApi} type="primary">
         runapi
+      </Button>
+      <Button  className={styles.btn} onClick={generateSummary} type="primary">
+        总结
       </Button>
       <Table
         components={components}
