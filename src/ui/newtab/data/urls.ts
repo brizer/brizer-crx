@@ -37,6 +37,10 @@ const urls: IUrlsGroup = {
       name: '产品设计导航大全'
     },
     {
+      url: 'https://webstack.cc/cn/index.html',
+      name: '设计师导航大全'
+    },
+    {
       url: 'https://17yongai.com/',
       name: 'AI产品大全'
     },
@@ -47,6 +51,10 @@ const urls: IUrlsGroup = {
     {
       url: 'https://nihaojob.github.io/vue-fabric-editor/',
       name: '在线制图'
+    },
+    {
+      url: 'https://design.palxp.com/home',
+      name: '在线制图高级版'
     }
   ],
   '常用开源快速导航': [
