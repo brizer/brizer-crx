@@ -55,6 +55,22 @@ const urls: IUrlsGroup = {
     {
       url: 'https://design.palxp.com/home',
       name: '在线制图高级版'
+    },
+    {
+      url: 'https://www.zhihu.com/creator/hot-question/hot/100026/day',
+      name: '知乎游戏主题每日热榜'
+    },
+    {
+      url: 'https://chatlaw.cloud/lawchat',
+      name: '中文法律大模型'
+    },
+    {
+      url: 'https://www.aishort.top/',
+      name: 'prompts提示词管理大全'
+    },
+    {
+      url: 'https://tophub.today/c/developer',
+      name: '热点聚合站'
     }
   ],
   '常用开源快速导航': [
